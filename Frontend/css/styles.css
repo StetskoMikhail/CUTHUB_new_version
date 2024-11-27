@@ -5,116 +5,116 @@ header {
 	background-size: cover;    
 	background-attachment: fixed; 
 	font-family: Arial, sans-serif;
-}
-
-body {
+ }
+ 
+ body {
 	font-family: Arial, sans-serif;
 	background-color: #f4f4f4;
 	margin: 0;
 	padding: 0;
-}
-.navbar {
+ }
+ .navbar {
 	display: flex;
 	align-items: center;
 	background-color: rgba(214,225,229, 0.8); /* Полупрозрачный черный фон */
 	height: 120px;
 	justify-content: center; /* Центрируем содержимое */
-}
-
-.navbar img {
+ }
+ 
+ .navbar img {
 	max-width: 220px;
 	height: 100px;
 	margin-right: 300px; /* Отодвигаем логотип влево */
-}
-
-.nav-list {
+ }
+ 
+ .nav-list {
 	list-style: none; /* Убираем маркеры списка */
 	padding: 0;
 	display: flex; /* Используем flexbox для горизонтального расположения */
 	font-size: 18px;
-}
-
-.nav-list li {
+ }
+ 
+ .nav-list li {
 	margin-left: 20px; /* Отступ между пунктами меню */
-}
-
-.nav-list a {
+ }
+ 
+ .nav-list a {
 	color: rgb(0, 0, 0); /* Цвет текста ссылок */
 	text-decoration: none; /* Убираем подчеркивание */
-}
-
-.title{
+ }
+ 
+ .title{
 	text-align: center;
-}
-
-.team__descr,.team__title {
+ }
+ 
+ .team__descr,.team__title {
 	text-shadow: 1px 1px 2px #fff
-}
-
-.team__descr {
+ }
+ 
+ .team__descr {
 	text-align: center;
 	font-size: 24px;
 	color: #552d25
-}
-
-.team__list {
+ }
+ 
+ .team__list {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	align-items: center;
 	justify-content: center
-}
-
-.team__item {
+ }
+ 
+ .team__item {
 	margin-bottom: 10px;
-  max-width: 30%;
-  text-align: center;
-}
-
-.team__item picture {
+	max-width: 30%;
+	text-align: center;
+ }
+ 
+ .team__item picture {
 	max-width: 100%
-}
-
-.team__item img {
+ }
+ 
+ .team__item img {
 	max-width: 100%;
 	height: 386px
-}
-
-.book-btn.btn {
+ }
+ 
+ .book-btn.btn {
 	width: 100%;
 	text-align: center;
 	color: #c98a6a;
 	border: 2px solid #c98a6a;
-}
-
-.book-btn.btn:hover {
+ }
+ 
+ .book-btn.btn:hover {
 	color: #fff;
 	border: 2px solid #fff
-}
-
-.barber {
+ }
+ 
+ .barber {
 	position: relative;
 	-webkit-transition: all 1s;
 	transition: all 1s
-}
-
-.barber:focus-within,.barber:hover {
+ }
+ 
+ .barber:focus-within,.barber:hover {
 	-webkit-box-shadow: 2px 2px 3px #c98a6a;
 	box-shadow: 2px 2px 3px #c98a6a
-}
-
-.barber:focus-within .barber__overlay,.barber:hover .barber__overlay {
+ }
+ 
+ .barber:focus-within .barber__overlay,.barber:hover .barber__overlay {
 	opacity: 1
-}
-
-.barber__overlay,.go-next::after {
+ }
+ 
+ .barber__overlay,.go-next::after {
 	position: absolute;
 	-webkit-transition: all 1s;
 	transition: all 1s
-}
-
-.barber__overlay {
+ }
+ 
+ .barber__overlay {
 	margin: 0;
 	padding: 10px;
 	display: -webkit-box;
@@ -127,53 +127,53 @@ body {
 	opacity: 0;
 	color: #c98a6a;
 	background-color: rgba(0,0,0,.7)
-}
-
-.barber__name,.barber__rating {
+ }
+ 
+ .barber__name,.barber__rating {
 	display: block;
-   padding: 20px;
-   width: 100%;
-   z-index: 5;
-   left: 0;
-   text-align: center;
-   text-decoration: underline;
-   color: #c98a6a;
-   background-color: rgba(0, 0, 0, .8);
-}
-
-.barber__name {
+	 padding: 20px;
+	 width: 100%;
+	 z-index: 5;
+	 left: 0;
+	 text-align: center;
+	 text-decoration: underline;
+	 color: #c98a6a;
+	 background-color: rgba(0, 0, 0, .8);
+ }
+ 
+ .barber__name {
 	top: 0;
 	font-size: 24px
-}
-
-.container {
+ }
+ 
+ .container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px;
-}
-
-.section_title {
+ }
+ 
+ .section_title {
 	text-align: center;
 	font-size: 2em;
 	margin-bottom: 20px;
 	text-shadow: 1px 1px 2px #fff;
-}
-
-.team__descr {
+ }
+ 
+ .team__descr {
 	text-align: center;
 	font-size: 24px;
 	color: #552d25;
 	text-shadow: 1px 1px 2px #fff;
-}
-
-.team__list {
+ }
+ 
+ .team__list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center; /* Центрирование по горизонтали */
 	align-items: center; /* Вертикальное центрирование */
 	width: 100%; /* Ширина контейнера */
- }
-.team__item {
+  }
+ .team__item {
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -182,38 +182,38 @@ body {
 	text-align: center;
 	width: calc(33.333% - 20px);
 	transition: transform 0.3s;
-}
-
-.team__item:hover {
+ }
+ 
+ .team__item:hover {
 	transform: scale(1.05);
-}
-
-.team__item picture {
+ }
+ 
+ .team__item picture {
 	max-width: 100%;
-}
-
-.team__item img {
+ }
+ 
+ .team__item img {
 	max-width: 100%;
 	height: 386px;
 	border-radius: 50%;
-}
-
-.barber_name {
+ }
+ 
+ .barber_name {
 	display: block;
 	margin-top: 10px;
 	font-size: 1.2em;
 	font-weight: bold;
 	text-align: center;
-}
-
-.barber__rating {
+ }
+ 
+ .barber__rating {
 	margin-top: 5px;
 	color: #914c4c;
 	font-size: 0.9em;
 	font-size: 25px
-}
-
-.barber__overlay {
+ }
+ 
+ .barber__overlay {
 	background-color: rgba(0, 0, 0, 0.7);
 	bottom: 0;
 	display: flex;
@@ -225,13 +225,12 @@ body {
 	right: 0;
 	top: 0;
 	transition: opacity 0.3s;
-}
-
-.team__item:hover .barber__overlay {
+ }
+ 
+ .team__item:hover .barber__overlay {
 	opacity: 1;
-}
-
-.book-btn {
+ }
+ .book-btn {
 	background-color: #ff6f61;
 	border: none;
 	border-radius: 5px;
@@ -242,19 +241,125 @@ body {
 	width: 100%;
 	text-align: center;
 	transform: translateY(30px);
-}
-
-.book-btn:hover {
+ }
+ 
+ .book-btn:hover {
 	background-color: #ff3b2f;
 	color: #fff;
 	border: 2px solid #fff;
-}
-
-.barber {
+ }
+ 
+ .barber {
 	position: relative;
 	transition: all 1s;
-}
-
-.barber:focus-within, .barber:hover {
+ }
+ 
+ .barber:focus-within, .barber:hover {
 	box-shadow: 2px 2px 3px #c98a6a;
-}
+ }
+ .services__list {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 20px; /* Отступы между элементами */
+	  justify-content: space-between;
+ }
+ 
+ .service__item {
+	  display: flex;
+	  flex-direction: column; /* Элементы внутри блока будут располагаться вертикально */
+	  background-color: #f9f9f9;
+	  border-radius: 8px;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	  padding: 20px;
+	  width: calc(33.333% - 20px); /* Три элемента в строке на большом экране */
+	  text-align: left;
+	  transition: transform 0.3s;
+ }
+ 
+ .service__item:hover {
+	  transform: translateY(-10px); /* Лёгкое поднятие при наведении */
+ }
+ 
+ .service__title {
+	  font-size: 1.6em;
+	  font-weight: bold;
+	  color: #2c3e50; /* Цвет заголовка */
+	  margin-bottom: 10px;
+	  text-transform: uppercase;
+ }
+ 
+ .service__description {
+	  font-size: 1.1em;
+	  color: #7f8c8d; /* Цвет для описания */
+	  margin-bottom: 15px;
+ }
+ 
+ .service__price {
+	  font-size: 1.4em;
+	  font-weight: bold;
+	  color: #020101; /* Цвет для цены */
+	  margin-top: auto; /* Выровнять по нижней части */
+	  align-self: flex-end; /* Выравнивание цены справа */
+ }
+ 
+ .service__item:hover .service__price {
+	  color: #f39c12; /* Изменение цвета цены при наведении */
+ }
+ 
+ @media (max-width: 768px) {
+	  .service__item {
+			width: calc(50% - 20px); /* Два элемента в строке на мобильных устройствах */
+	  }
+ }
+ 
+ @media (max-width: 480px) {
+	  .service__item {
+			width: 100%; /* Один элемент в строке на очень маленьких экранах */
+	  }
+ }
+ /* Стили для футера */
+ .footer {
+	  background-color: #000; /* Черный фон для футера */
+	  color: #fff; /* Белый текст */
+	  text-align: center; /* Центрируем содержимое по умолчанию */
+	  padding: 20px 0; /* Отступы сверху и снизу */
+	  font-size: 1.2em; /* Размер шрифта */
+	  position: relative; /* Позиционирование футера */
+	  bottom: 0; /* Устанавливаем футер внизу */
+	  width: 100%; /* Футер на всю ширину */
+ }
+ 
+ /* Стили для футера */
+ .footer {
+	  background-color: #000; /* Черный фон для футера */
+	  color: #fff; /* Белый текст */
+	  text-align: center; /* Центрируем содержимое по умолчанию */
+	  padding: 20px 0; /* Отступы сверху и снизу */
+	  font-size: 1.2em; /* Размер шрифта */
+	  position: relative; /* Позиционирование футера */
+	  bottom: 0; /* Устанавливаем футер внизу */
+	  width: 100%; /* Футер на всю ширину */
+ }
+ 
+ /* Контейнер внутри футера */
+ .footer-container {
+	  display: flex; /* Используем flexbox для расположения логотипа и текста */
+	  justify-content: space-between; /* Пространство между элементами */
+	  align-items: center; /* Выравнивание по вертикали */
+	  width: 100%; /* На всю ширину контейнера */
+	  max-width: 1200px; /* Максимальная ширина контейнера */
+	  margin: 0 auto; /* Центрируем контейнер */
+ }
+ 
+ /* Стили для логотипа */
+ .footer-logo img {
+	  height: 110px; /* Высота логотипа */
+	  width: auto; /* Автоматическая ширина, чтобы сохранить пропорции */
+ }
+ 
+ /* Стили для текста местоположения */
+ .footer-location p {
+	  margin: 0; /* Убираем отступы вокруг текста */
+	  font-size: 1.1em; /* Размер шрифта для текста местоположения */
+	  text-align: right; /* Выравнивание текста по правому краю */
+ }

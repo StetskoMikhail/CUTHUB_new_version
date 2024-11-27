@@ -91,85 +91,44 @@ body {
 	color: #fff;
 	border: 2px solid #fff
 }
-/* Блок о нас */
-.about-us {
+
+/* Основные стили для галереи */
+.gallery {
+	text-align: center;
 	padding: 20px;
-	background-color: #f5f5f5; 
-	font-family: Arial, sans-serif;
-	line-height: 1.6;
-	text-align: center; /* Центрирование текста всего блока */
 }
-.about-us h1 {
+
+.gallery h1 {
 	font-size: 2.5em;
+	margin-bottom: 30px;
 	color: #333;
-	margin-bottom: 20px;
-	text-align: center; /* Центрирование заголовка */
-}
-.about-us p {
-	font-size: 1.2em;
-	color: #555;
-	margin-bottom: 15px;
-	text-align: left; /* Текст абзацев выровнен по левому краю */
-	padding: 0 10px; /* Немного отступов внутри абзаца */
 }
 
-/* Новости и акции */
-.news-and-promotions h2 {
-	font-size: 2.5em;
-	color: #333;
-	margin-bottom: 20px;
-	text-align: center; /* Центрирование заголовка */
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Увеличение минимальной ширины карточек */
+	gap: 30px; /* Увеличение промежутка между карточками */
+	padding: 0 20px;
 }
 
-.news-container {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	justify-content: center; /* Центрирование элементов внутри блока */
-	padding: 20px;
-	background-color: #1e1e1e;
-}
-
-.news-item {
-	background-color: #2a2a2a;
-	color: #fff;
-	width: 300px;
-	border-radius: 10px;
+.gallery-item {
+	background-color: #fff;
+	border-radius: 15px; /* Увеличение скругления углов для более плавного вида */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
 	overflow: hidden;
 	text-align: center;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.news-item img {
+.gallery-item img {
 	width: 100%;
-	height: 200px;
+	height: 300px; /* Увеличение высоты изображений */
 	object-fit: cover;
+	border-bottom: 3px solid #f0f0f0; /* Увеличение толщины границы */
 }
 
-.news-item h3 {
-	color: #ff8c42;
-	font-size: 1.2em;
-	margin: 10px 0;
+.gallery-item p {
+	font-size: 1.3em; /* Увеличение размера шрифта */
+	margin: 15px;
+	color: #333;
 }
 
-.news-item h4 {
-	margin: 10px 0;
-	font-size: 1.1em;
-}
-
-.news-item p {
-	font-size: 0.9em;
-	padding: 0 10px 15px;
-}
-
-.news-item a {
-	display: inline-block;
-	color: #ff8c42;
-	text-decoration: none;
-	margin-bottom: 10px;
-	font-weight: bold;
-}
-
-.news-item a:hover {
-	text-decoration: underline;
-}
