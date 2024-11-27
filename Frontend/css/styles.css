@@ -1,6 +1,6 @@
 header {
 	margin: 0; /* Убираем отступы по умолчанию у body */
-	background-image: url('img/bshop-1.jpg'); 
+	background-image: url('.img\Фон_для_барберов_2.jpg'); 
 	background-repeat: no-repeat; 
 	background-size: cover;    
 	background-attachment: fixed; 
@@ -229,8 +229,7 @@ header {
  
  .team__item:hover .barber__overlay {
 	opacity: 1;
- }
- .book-btn {
+ }.book-btn {
 	background-color: #ff6f61;
 	border: none;
 	border-radius: 5px;
@@ -257,6 +256,7 @@ header {
  .barber:focus-within, .barber:hover {
 	box-shadow: 2px 2px 3px #c98a6a;
  }
+ /* Стили для списка услуг */
  .services__list {
 	  display: flex;
 	  flex-wrap: wrap;
@@ -264,10 +264,20 @@ header {
 	  justify-content: space-between;
  }
  
+ /* Фон в виде картинки для секции */
+ #services {
+	  background-image: url('Frontend\.img\Фон_для_барберов_2.jpg'); 
+	  background-size: cover; /* Картинка будет покрывать весь блок */
+	  background-position: center; /* Центрирование картинки */
+	  background-attachment: fixed; /* Фиксированное положение фона */
+	  padding: 50px 0; /* Отступы сверху и снизу */
+ }
+ 
+ /* Стили для каждого элемента услуги */
  .service__item {
 	  display: flex;
 	  flex-direction: column; /* Элементы внутри блока будут располагаться вертикально */
-	  background-color: #f9f9f9;
+	  background-color: rgba(255, 255, 255, 0.9); /* Белый фон с прозрачностью для контраста с фоном */
 	  border-radius: 8px;
 	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	  padding: 20px;
@@ -306,6 +316,7 @@ header {
 	  color: #f39c12; /* Изменение цвета цены при наведении */
  }
  
+ /* Адаптивные стили */
  @media (max-width: 768px) {
 	  .service__item {
 			width: calc(50% - 20px); /* Два элемента в строке на мобильных устройствах */
@@ -317,49 +328,62 @@ header {
 			width: 100%; /* Один элемент в строке на очень маленьких экранах */
 	  }
  }
- /* Стили для футера */
+ /* Стили для подвала */
  .footer {
-	  background-color: #000; /* Черный фон для футера */
-	  color: #fff; /* Белый текст */
-	  text-align: center; /* Центрируем содержимое по умолчанию */
+	  background-color: rgba(214,225,229, 0.8); /*  фон */
+	  color: #000000; /* текст */
 	  padding: 20px 0; /* Отступы сверху и снизу */
-	  font-size: 1.2em; /* Размер шрифта */
-	  position: relative; /* Позиционирование футера */
-	  bottom: 0; /* Устанавливаем футер внизу */
-	  width: 100%; /* Футер на всю ширину */
+	  text-align: center;
  }
  
- /* Стили для футера */
- .footer {
-	  background-color: #000; /* Черный фон для футера */
-	  color: #fff; /* Белый текст */
-	  text-align: center; /* Центрируем содержимое по умолчанию */
-	  padding: 20px 0; /* Отступы сверху и снизу */
-	  font-size: 1.2em; /* Размер шрифта */
-	  position: relative; /* Позиционирование футера */
-	  bottom: 0; /* Устанавливаем футер внизу */
-	  width: 100%; /* Футер на всю ширину */
+ .footer__content {
+	  display: flex;
+	  justify-content: space-between; /* Размещение блоков слева и справа */
+	  align-items: center;
+	  max-width: 1200px;
+	  margin: 0 auto; /* Центрирование подвала */
  }
  
- /* Контейнер внутри футера */
- .footer-container {
-	  display: flex; /* Используем flexbox для расположения логотипа и текста */
-	  justify-content: space-between; /* Пространство между элементами */
-	  align-items: center; /* Выравнивание по вертикали */
-	  width: 100%; /* На всю ширину контейнера */
-	  max-width: 1200px; /* Максимальная ширина контейнера */
-	  margin: 0 auto; /* Центрируем контейнер */
+ .footer__left {
+	  display: flex;
+	  justify-content: space-between;
+	  gap: 15px; /* Отступы между изображениями */
  }
  
- /* Стили для логотипа */
- .footer-logo img {
-	  height: 110px; /* Высота логотипа */
-	  width: auto; /* Автоматическая ширина, чтобы сохранить пропорции */
+ .footer__link {
+	  display: inline-block;
+	  text-decoration: none; /* Убираем подчеркивание */
  }
  
- /* Стили для текста местоположения */
- .footer-location p {
-	  margin: 0; /* Убираем отступы вокруг текста */
-	  font-size: 1.1em; /* Размер шрифта для текста местоположения */
-	  text-align: right; /* Выравнивание текста по правому краю */
+ .footer__image {
+	  width: 50px; /* Ширина изображений */
+	  height: 50px; /* Высота изображений */
+	  object-fit: cover; /* Сохранение пропорций изображений */
+	  border-radius: 5px; /* Скругление углов */
+	  transition: transform 0.3s ease; /* Плавный переход при наведении */
+ }
+ 
+ .footer__image:hover {
+	  transform: scale(1.1); /* Увеличение изображения при наведении */
+ }
+ 
+ .footer__right {
+	  font-size: 18px; /* Размер шрифта для текста */
+	  font-weight: bold;
+ }
+ 
+ @media (max-width: 768px) {
+	  .footer__content {
+			flex-direction: column; /* Вертикальное расположение элементов на мобильных устройствах */
+			align-items: center;
+	  }
+ 
+	  .footer__left {
+			margin-bottom: 15px;
+	  }
+ 
+	  .footer__image {
+			width: 40px;
+			height: 40px;
+	  }
  }

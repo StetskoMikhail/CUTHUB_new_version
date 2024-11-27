@@ -184,38 +184,74 @@ body {
 	bottom: 0; /* Устанавливаем футер внизу */
 	width: 100%; /* Футер на всю ширину */
 }
+ /* Адаптивные стили */
+ @media (max-width: 768px) {
+	.service__item {
+		 width: calc(50% - 20px); /* Два элемента в строке на мобильных устройствах */
+	}
+}
 
-/* Стили для футера */
-.footer {
-	background-color: #000; /* Черный фон для футера */
-	color: #fff; /* Белый текст */
-	text-align: center; /* Центрируем содержимое по умолчанию */
+@media (max-width: 480px) {
+	.service__item {
+		 width: 100%; /* Один элемент в строке на очень маленьких экранах */
+	}
+}
+ /* Стили для подвала */
+ .footer {
+	background-color: rgba(214,225,229, 0.8); /*  фон */
+	color: #000000; /* текст */
 	padding: 20px 0; /* Отступы сверху и снизу */
-	font-size: 1.2em; /* Размер шрифта */
-	position: relative; /* Позиционирование футера */
-	bottom: 0; /* Устанавливаем футер внизу */
-	width: 100%; /* Футер на всю ширину */
+	text-align: center;
 }
 
-/* Контейнер внутри футера */
-.footer-container {
-	display: flex; /* Используем flexbox для расположения логотипа и текста */
-	justify-content: space-between; /* Пространство между элементами */
-	align-items: center; /* Выравнивание по вертикали */
-	width: 100%; /* На всю ширину контейнера */
-	max-width: 1200px; /* Максимальная ширина контейнера */
-	margin: 0 auto; /* Центрируем контейнер */
+.footer__content {
+	display: flex;
+	justify-content: space-between; /* Размещение блоков слева и справа */
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto; /* Центрирование подвала */
 }
 
-/* Стили для логотипа */
-.footer-logo img {
-	height: 110px; /* Высота логотипа */
-	width: auto; /* Автоматическая ширина, чтобы сохранить пропорции */
+.footer__left {
+	display: flex;
+	justify-content: space-between;
+	gap: 15px; /* Отступы между изображениями */
 }
 
-/* Стили для текста местоположения */
-.footer-location p {
-	margin: 0; /* Убираем отступы вокруг текста */
-	font-size: 1.1em; /* Размер шрифта для текста местоположения */
-	text-align: right; /* Выравнивание текста по правому краю */
+.footer__link {
+	display: inline-block;
+	text-decoration: none; /* Убираем подчеркивание */
+}
+
+.footer__image {
+	width: 50px; /* Ширина изображений */
+	height: 50px; /* Высота изображений */
+	object-fit: cover; /* Сохранение пропорций изображений */
+	border-radius: 5px; /* Скругление углов */
+	transition: transform 0.3s ease; /* Плавный переход при наведении */
+}
+
+.footer__image:hover {
+	transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+.footer__right {
+	font-size: 18px; /* Размер шрифта для текста */
+	font-weight: bold;
+}
+
+@media (max-width: 768px) {
+	.footer__content {
+		 flex-direction: column; /* Вертикальное расположение элементов на мобильных устройствах */
+		 align-items: center;
+	}
+
+	.footer__left {
+		 margin-bottom: 15px;
+	}
+
+	.footer__image {
+		 width: 40px;
+		 height: 40px;
+	}
 }
