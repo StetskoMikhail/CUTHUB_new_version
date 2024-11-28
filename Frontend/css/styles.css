@@ -1,6 +1,5 @@
 header {
 	margin: 0; /* Убираем отступы по умолчанию у body */
-	background-image: url('.img\Фон_для_барберов_2.jpg'); 
 	background-repeat: no-repeat; 
 	background-size: cover;    
 	background-attachment: fixed; 
@@ -153,12 +152,19 @@ header {
  }
  
  .section_title {
+	color: #fff; /* Белый цвет текста */
 	text-align: center;
-	font-size: 2em;
+	font-size: 2.5em; /* Увеличенный размер шрифта */
 	margin-bottom: 20px;
-	text-shadow: 1px 1px 2px #fff;
- }
- 
+	text-shadow: 2px 2px 5px #000; /* Тень для выделения на фоне */
+}
+.section_title_one {
+	color: #000000; /* Белый цвет текста */
+	text-align: center;
+	font-size: 2.5em; /* Увеличенный размер шрифта */
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 5px #000; /* Тень для выделения на фоне */
+}
  .team__descr {
 	text-align: center;
 	font-size: 24px;
@@ -181,15 +187,15 @@ header {
 	overflow: hidden;
 	text-align: center;
 	width: calc(33.333% - 20px);
-	transition: transform 0.3s;
+	transition: transform 0.3s; /* Плавный переход для трансформации */
  }
  
  .team__item:hover {
-	transform: scale(1.05);
+	transform: scale(1.05); /* Увеличение карточки на 5% при наведении */
  }
  
  .team__item picture {
-	max-width: 100%;
+	max-width: 100%; 
  }
  
  .team__item img {
@@ -214,20 +220,20 @@ header {
  }
  
  .barber__overlay {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.7); /* Темный полупрозрачный фон */
 	bottom: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	left: 0;
-	opacity: 0;
+	opacity: 0; /* Скрыто по умолчанию */
 	position: absolute;
 	right: 0;
 	top: 0;
 	transition: opacity 0.3s;
  }
  
- .team__item:hover .barber__overlay {
+ .team__item:hover .barber__overlay { /* Отображение при наведении */
 	opacity: 1;
  }.book-btn {
 	background-color: #ff6f61;
@@ -265,8 +271,8 @@ header {
  }
  
  /* Фон в виде картинки для секции */
- #services {
-	  background-image: url('Frontend\.img\Фон_для_барберов_2.jpg'); 
+ .services {
+	background-color: #000; /* Чёрный фон для секции */
 	  background-size: cover; /* Картинка будет покрывать весь блок */
 	  background-position: center; /* Центрирование картинки */
 	  background-attachment: fixed; /* Фиксированное положение фона */
@@ -293,7 +299,7 @@ header {
  .service__title {
 	  font-size: 1.6em;
 	  font-weight: bold;
-	  color: #2c3e50; /* Цвет заголовка */
+	  color: #ffffff; /* Цвет заголовка */
 	  margin-bottom: 10px;
 	  text-transform: uppercase;
  }
