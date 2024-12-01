@@ -41,51 +41,141 @@ header {
 	color: rgb(0, 0, 0); /* Цвет текста ссылок */
 	text-decoration: none; /* Убираем подчеркивание */
  }
- /*Стили для первого блока О НАС в index.html*/
- .advertisement {
-	position: relative; /* Для добавления слоёв */
-	background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg);
-	background-size: cover;
-	background-attachment: fixed; /* Фон остаётся фиксированным при прокрутке */
-	background-position: center;
-	color: #ffffff; /* Белый текст */
-	text-align: left; /* Выравнивание текста по левому краю */
-	padding: 200px 20px;
-}
-
-.advertisement::before {
-	content: "";
-	position: absolute;
+ 
+ .title{
+	text-align: center;
+ }
+ 
+ .barber:focus-within,.barber:hover {
+	-webkit-box-shadow: 2px 2px 3px #c98a6a;
+	box-shadow: 2px 2px 3px #c98a6a
+ }
+ 
+ .barber__overlay {
+	margin: 0;
+	padding: 10px;
+	display: flex;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный слой */
-	z-index: 1; /* Помещаем слой под текстом */
-}
-
-.advertisement_title,
-.advertisement_slogan,
-.advertisement_address,
-.advertisement_contact {
-	position: relative; /* Чтобы текст был поверх затемнённого слоя */
-	z-index: 2;
+	opacity: 0;
+	color: #c98a6a;
+	background-color: rgba(0,0,0,.7)
+ }
+ 
+ .barber__name,.barber__rating {
+	display: block;
+	 padding: 20px;
+	 width: 100%;
+	 z-index: 5; /*какой элемент будет "надо другим"*/
+	 left: 0;
+	 text-align: center;
+	 color: #c98a6a;
+	 background-color: rgba(0, 0, 0, .8);
+ }
+ 
+ .barber__name {
+	top: 0;
+	font-size: 24px
+ }
+ 
+ .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+ }
+ 
+ .section_title {
+	color: #fff;
+	text-align: center;
+	font-size: 2.5em; /* Увеличенный размер шрифта */
 	margin-bottom: 20px;
+	text-shadow: 2px 2px 5px #000; /* Тень для выделения на фоне */
 }
 
-.advertisement_title {
-	font-size: 3.5em;
+ .team__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* Центрирование по горизонтали */
+	align-items: center; /* Вертикальное центрирование */
+	width: 100%; /* Ширина контейнера */
+  }
+ .team__item {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	overflow: hidden;
+	text-align: center;
+	width: calc(33.333% - 20px);
+	transition: transform 0.3s; /* Плавный переход для трансформации */
+ }
+ 
+ .team__item:hover {
+	transform: scale(1.05); /* Увеличение карточки на 5% при наведении */
+ }
+ 
+ .team__item picture {
+	max-width: 100%; 
+ }
+ 
+ .team__item img {
+	max-width: 100%;
+	height: 386px;
+	border-radius: 50%;
+ }
+ 
+ .barber_name {
+	display: block;
+	margin-top: 10px;
+	font-size: 1.2em;
 	font-weight: bold;
-}
+	text-align: center;
+ }
+ 
+ .barber__overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 0;
+	opacity: 0; /* Скрыто по умолчанию */
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: opacity 0.3s;
+ }
+ 
+ .team__item:hover .barber__overlay { /* Отображение при наведении */
+	opacity: 1;
+ }
+ .book-btn { /*кнопка записи*/
+	background-color: #ff6f61;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: background-color 0.3s;
+	width: 100%;
+	text-align: center;
+	transform: translateY(30px);
+ }
+ 
+ .book-btn:hover { 
+	background-color: #ff3b2f;
+	color: #fff;
+	border: 2px solid #fff; /*добавляет белую рамку толщиной 2 пикселя при наведении*/
+ }
+ 
+ .barber {
+	position: relative;
+	transition: all 1s;
+ }
+ 
 
-.advertisement_slogan {
-	font-size: 1.8em;
-}
-
-.advertisement_address,
-.advertisement_contact {
-	font-size: 1.5em;
-}
  /* Стили для списка услуг */
  .services__list {
 	  display: flex;

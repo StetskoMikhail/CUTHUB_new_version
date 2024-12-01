@@ -42,53 +42,6 @@ body {
 	text-decoration: none; /* Убираем подчеркивание */
 }
 
-.title{
-	text-align: center; /* Выравнивание текста заголовков по центру */
-}
-
-.team__descr,.team__title {
-	text-shadow: 1px 1px 2px #fff
-}
-
-.team__descr {
-	text-align: center;
-	font-size: 24px;
-	color: #552d25
-}
-
-.team__list {
-	flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
-	align-items: center; /* Центрируем элементы по вертикали */
-	justify-content: center; /* Центрируем элементы по горизонтали */
-}
-
-.team__item {
-	margin-bottom: 10px; /* Отступы снизу между элементами */
-	max-width: 30%; /* Максимальная ширина карточки команды */
-	text-align: center; /* Текст в карточке по центру */
-}
-
-.team__item picture {
-	max-width: 100%; /* Картинка занимает всю доступную ширину контейнера */
-}
-
-.team__item img {
-	max-width: 100%; /* Изображение не выходит за пределы контейнера */
-	height: 386px; /* Фиксированная высота изображения */
-}
-
-.book-btn.btn {
-	width: 100%; /* Кнопка занимает всю ширину контейнера */
-	text-align: center; /* Текст внутри кнопки по центру */
-	color: #c98a6a; /* Коричневый цвет текста */
-	border: 2px solid #c98a6a; /* Коричневая рамка */
-}
-
-.book-btn.btn:hover {
-	color: #fff; /* Белый цвет текста при наведении */
-	border: 2px solid #fff; /* Белая рамка при наведении */
-}
-
 /* Основные стили для галереи */
 .gallery {
 	text-align: center; /* Центрирование контента галереи */
@@ -96,37 +49,28 @@ body {
 }
 
 .gallery h1 {
-	font-size: 2.5em; /* Размер шрифта заголовка */
-	margin-bottom: 30px; /* Отступ снизу */
-	color: #333; /* Серый цвет текста */
+	font-size: 2.5em; 
+	margin-bottom: 30px; 
+	color: #333; 
 }
 
 .gallery-grid {
 	display: grid; /* Используем сетку для расположения элементов */
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Колонки с минимальной шириной 300px */
 	gap: 30px; /* Расстояние между элементами сетки */
-	padding: 0 20px; /* Горизонтальные отступы */
+	padding: 0 20px; 
 }
 
 .gallery-item {
-	background-color: #fff; /* Белый фон карточки галереи */
-	border-radius: 15px; /* Скругленные углы */
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Тень вокруг карточки */
+	background-color: #fff; 
+	border-radius: 15px; 
 	overflow: hidden; /* Прячем содержимое за границами блока */
-	text-align: center; /* Центрируем текст в карточке */
 }
 
 .gallery-item img {
 	width: 100%; /* Изображение занимает всю ширину карточки */
 	height: 300px; /* Фиксированная высота изображения */
 	object-fit: cover; /* Изображение обрезается, чтобы заполнить блок */
-	border-bottom: 3px solid #f0f0f0; /* Нижняя граница карточки */
-}
-
-.gallery-item p {
-	font-size: 1.3em; /* Увеличенный размер шрифта текста */
-	margin: 15px; /* Отступы внутри карточки */
-	color: #333; /* Серый цвет текста */
 }
 /* Стили для футера */
 .footer {
