@@ -205,3 +205,88 @@ body {
 		 height: 40px;
 	}
 }
+ /* Тёмная тема: общий стиль */
+ body.dark-theme {
+	background-color: #121212;
+	color: #ffffff;
+ }
+ /*Кнопка для переключения темы*/
+ .theme-toggle-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+ }
+ 
+ .theme-toggle-btn:hover {
+	background-color: #0056b3;
+ }
+ 
+ /* Тёмная тема для заголовков */
+ body.dark-theme h1, 
+ body.dark-theme h2, 
+ body.dark-theme h3 {
+	color: #ffffff;
+ }
+ 
+ /* Тёмная тема для навигации */
+ body.dark-theme .navbar {
+	background-color: rgba(50, 50, 50, 0.8);
+ }
+ 
+ body.dark-theme .nav-list a {
+	color: #ffffff; /* Ссылки в меню */
+ }
+ 
+ /* Тёмная тема для первого блока */
+ body.dark-theme .advertisement {
+	background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg);
+	color: #f4f4f4; /* Белый текст */
+ }
+ 
+ body.dark-theme .advertisement::before {
+	background: rgba(0, 0, 0, 0.7); /* Более тёмный слой */
+ }
+ 
+ /* Тёмная тема для услуг */
+ body.dark-theme .services {
+	background-color: #1a1a1a;
+ }
+ 
+ body.dark-theme .service__item {
+	background-color: rgba(255, 255, 255, 0.1); /* Тёмный фон */
+	color: #ffffff; /* Белый текст */
+ }
+ 
+ body.dark-theme .service__item:hover {
+	transform: translateY(-10px);
+ }
+ 
+ body.dark-theme .service__price {
+	color: #ffd700; /* Золотой цвет цены */
+ }
+ 
+ body.dark-theme .service__item:hover .service__price {
+	color: #ff9900; /* Оранжевый при наведении */
+ }
+ 
+ /* Тёмная тема для подвала */
+ body.dark-theme .footer {
+	background-color: rgba(40, 40, 40, 0.8);
+	color: #ffffff;
+ }
+ 
+ body.dark-theme .footer__image {
+	filter: brightness(0.8); /* Затемнение изображений */
+ }
+ 
+ body.dark-theme .footer__image:hover {
+	filter: brightness(1); /* Увеличение яркости при наведении */
+ }

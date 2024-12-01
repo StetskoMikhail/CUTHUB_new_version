@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/masters.css">
 </head>
 <header>
   <div class="navbar">
@@ -21,6 +21,7 @@
           <li><a href="#">Контакты</a></li>
        </ul>
     </nav>
+	 <button id="theme-toggle" class="theme-toggle-btn">Переключить тему</button>
   </header>
 <body>
 	<main>
@@ -30,13 +31,13 @@
 			 <p class="team_descr title">Выберите мастера для записи</p>
 			 <ul class="team__list row">
 				<li class="team__item barber">
-				  <picture>
-					 <img src=".img/Дарья.jpg" alt="Мастер Дарья" width="386" height="386" loading="lazy">
-				  </picture>
-				  <span class="barber_name">Дарья</span>
-				  <span class="barber__position">Старший барбер</span>
-				  <div class="barber__overlay row">
-					 <a class="book-btn btn" href="" target="_blank">Записаться к мастеру</a>
+					<picture>
+					  <img src=".img/Дарья.jpg" alt="Мастер Дарья" width="386" height="386" loading="lazy">
+					</picture>
+					<span class="barber_name">Дарья</span>
+					<span class="barber__position">Старший барбер</span>
+					<div class="barber__overlay">
+					  <a class="book-btn btn" href="#" target="_blank">Записаться к мастеру</a>
 				  </div>
 				</li>
 				<li class="team__item barber">
@@ -116,5 +117,6 @@
 			</div>
 		 </footer>
 	 </main>
+	 <script src=".js/script.js"></script>
 	</body>
 	</html>

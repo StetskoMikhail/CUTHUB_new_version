@@ -41,213 +41,157 @@ header {
 	color: rgb(0, 0, 0); /* Цвет текста ссылок */
 	text-decoration: none; /* Убираем подчеркивание */
  }
- 
- .title{
+
+ /* Заголовок и его описание*/
+.team_title {
+	font-size: 2.5em;          
+	font-weight: bold;          
+	color: #333;                
+	margin: 0.5em 0;            /* Отступы сверху и снизу */
+	flex-direction: column;     /* Элементы располагаются по вертикали */
+    justify-content: center;    /* Центрируем по вертикали */
+    align-items: center;        /* Центрируем по горизонтали */
+	 text-align: center;         /* Центрируем текст внутри элементов */
+}
+.team_descr {
+	font-size: 1.5em;           /* Размер шрифта */
+	color: #777;                /* Цвет текста */
+	margin: 0.5em 0;            /* Отступы сверху и снизу */
+	flex-direction: column;     /* Элементы располагаются по вертикали */
+    justify-content: center;    /* Центрируем по вертикали */
+    align-items: center;        /* Центрируем по горизонтали */
+	 text-align: center;         /* Центрируем текст внутри элементов */
+}
+
+
+/*Карточки барберов*/
+.team__list {
+	display: flex;                  /* Используем Flexbox */
+	flex-wrap: wrap;                 /* Разрешаем перенос элементов на новую строку */
+	justify-content: space-between;  /* Распределяем карточки по ширине с отступами */
+	gap: 20px;                       /* Отступы между карточками */
+	padding: 0;                      /* Убираем внутренние отступы */
+	list-style: none;                /* Убираем маркеры списка */
+	margin: 0;                       /* Убираем внешние отступы */
+}
+
+/* Карточки барберов */
+.team__item {
+	background-color: transparent;  /* Убираем белый фон */
+	border: none;                   /* Убираем границы */
+	border-radius: 20px;            /* Скругленные углы */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Мягкая тень */
+	overflow: hidden;               /* Обрезаем содержимое за границами */
 	text-align: center;
- }
- 
- .barber:focus-within,.barber:hover {
-	-webkit-box-shadow: 2px 2px 3px #c98a6a;
-	box-shadow: 2px 2px 3px #c98a6a
- }
- 
- .barber__overlay {
-	margin: 0;
-	padding: 10px;
+	position: relative;             /* Для корректного отображения оверлея */
+	flex: 1 1 calc(33.333% - 20px);  /* Карточки занимают треть ширины с учетом отступов */
+	max-width: calc(33.333% - 20px); /* Ограничиваем максимальную ширину */
+	transition: transform 0.3s, box-shadow 0.3s;
+	display: flex;                  /* Включаем flexbox для выравнивания содержимого */
+	flex-direction: column;         /* Располагаем элементы по вертикали */
+	justify-content: center;        /* Выравниваем элементы по вертикали */
+	align-items: center;            /* Выравниваем элементы по горизонтали */
+}
+
+/* Эффект при наведении */
+.team__item:hover {
+	transform: scale(1.08);         /* Увеличение карточки */
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Усиление тени */
+}
+
+/* Изображение мастера */
+.team__item img {
+	max-width: 100%;                /* Ограничиваем ширину до 100% от карточки */
+	height: 360px;                  /* Устанавливаем фиксированную высоту */
+	border-radius: 50%;             /* Круглая форма */
+	transition: transform 0.3s;     /* Эффект увеличения */
+}
+
+/* Эффект увеличения изображения при наведении */
+.team__item:hover img {
+	transform: scale(1.1);
+}
+
+/* Имя мастера */
+.barber_name {
+	margin-top: 15px;
+	font-size: 1.5em;               /* Крупный текст имени */
+	font-weight: bold;
+	color: #333;
+	transition: color 0.3s;         /* Плавное изменение цвета текста */
+	text-align: center;             /* Центрируем имя по горизонтали */
+}
+
+/* Эффект при наведении на карточку */
+.team__item:hover .barber_name {
+	color: #ff6f61;                 /* Изменение цвета имени */
+}
+
+/* Должность мастера */
+.barber__position {
+	font-size: 1.2em;
+	color: #777;
+	margin-bottom: 15px;
+	transition: color 0.3s;         /* Плавное изменение цвета */
+}
+
+.team__item:hover .barber__position {
+	color: #ff3b2f;                 /* Изменение цвета должности */
+}
+
+/* Кнопка записи */
+.book-btn {
+	background-color: #ff6f61;
+	border: none;
+	border-radius: 30px;            /* Закругленная форма */
+	color: #fff;
+	padding: 12px 25px;
+	text-decoration: none;
+	transition: background-color 0.3s, transform 0.3s; /* Анимация цвета и "подскока" */
+	cursor: pointer;
+	display: inline-block;          /* Для корректного отображения кнопки */
+	margin-top: 10px;
+}
+.book-btn:hover {
+	background-color: #ff3b2f;
+	transform: translateY(-3px);    /* Легкий подъем вверх */
+}
+
+/* Оверлей (при наведении) */
+.barber__overlay {
+	background-color: rgba(0, 0, 0, 0.6); /* Темный полупрозрачный фон */
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;                      /* Скрыт по умолчанию */
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	opacity: 0;
-	color: #c98a6a;
-	background-color: rgba(0,0,0,.7)
- }
- 
- .barber__name,.barber__rating {
-	display: block;
-	 padding: 20px;
-	 width: 100%;
-	 z-index: 5; /*какой элемент будет "надо другим"*/
-	 left: 0;
-	 text-align: center;
-	 color: #c98a6a;
-	 background-color: rgba(0, 0, 0, .8);
- }
- 
- .barber__name {
-	top: 0;
-	font-size: 24px
- }
- 
- .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px;
- }
- 
- .section_title {
-	color: #fff;
-	text-align: center;
-	font-size: 2.5em; /* Увеличенный размер шрифта */
-	margin-bottom: 20px;
-	text-shadow: 2px 2px 5px #000; /* Тень для выделения на фоне */
+	transition: opacity 0.3s ease-in-out;
+	z-index: 1;                      /* Поверх изображения */
 }
 
- .team__list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center; /* Центрирование по горизонтали */
-	align-items: center; /* Вертикальное центрирование */
-	width: 100%; /* Ширина контейнера */
-  }
- .team__item {
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	margin-bottom: 20px;
-	overflow: hidden;
-	text-align: center;
-	width: calc(33.333% - 20px);
-	transition: transform 0.3s; /* Плавный переход для трансформации */
- }
- 
- .team__item:hover {
-	transform: scale(1.05); /* Увеличение карточки на 5% при наведении */
- }
- 
- .team__item picture {
-	max-width: 100%; 
- }
- 
- .team__item img {
-	max-width: 100%;
-	height: 386px;
-	border-radius: 50%;
- }
- 
- .barber_name {
-	display: block;
-	margin-top: 10px;
-	font-size: 1.2em;
-	font-weight: bold;
-	text-align: center;
- }
- 
- .barber__overlay {
-	background-color: rgba(0, 0, 0, 0.7);
-	bottom: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	left: 0;
-	opacity: 0; /* Скрыто по умолчанию */
-	position: absolute;
-	right: 0;
-	top: 0;
-	transition: opacity 0.3s;
- }
- 
- .team__item:hover .barber__overlay { /* Отображение при наведении */
+/* Появление оверлея при наведении */
+.team__item:hover .barber__overlay {
 	opacity: 1;
- }
- .book-btn { /*кнопка записи*/
-	background-color: #ff6f61;
-	border: none;
-	border-radius: 5px;
-	color: #fff;
-	padding: 10px 20px;
-	text-decoration: none;
-	transition: background-color 0.3s;
-	width: 100%;
-	text-align: center;
-	transform: translateY(30px);
- }
- 
- .book-btn:hover { 
-	background-color: #ff3b2f;
-	color: #fff;
-	border: 2px solid #fff; /*добавляет белую рамку толщиной 2 пикселя при наведении*/
- }
- 
- .barber {
-	position: relative;
-	transition: all 1s;
- }
- 
+}
 
- /* Стили для списка услуг */
- .services__list {
-	  display: flex;
-	  flex-wrap: wrap;
-	  gap: 20px; /* Отступы между элементами */
-	  justify-content: space-between;
- }
- 
- /* Фон в виде картинки для секции */
- .services {
-	background-color: #000; /* Чёрный фон для секции */
-	  background-size: cover; /* Картинка будет покрывать весь блок */
-	  background-position: center; /* Центрирование картинки */
-	  background-attachment: fixed; /* Фиксированное положение фона */
-	  padding: 50px 0; /* Отступы сверху и снизу */
- }
- 
- /* Стили для каждого элемента услуги */
- .service__item {
-	  display: flex;
-	  flex-direction: column; /* Элементы внутри блока будут располагаться вертикально */
-	  background-color: rgba(255, 255, 255, 0.9); /* Белый фон с прозрачностью для контраста с фоном */
-	  border-radius: 8px;
-	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	  padding: 20px;
-	  width: calc(33.333% - 20px); /* Три элемента в строке на большом экране */
-	  text-align: left;
-	  transition: transform 0.3s;
- }
- 
- .service__item:hover {
-	  transform: translateY(-10px); /* Лёгкое поднятие при наведении */
- }
- 
- .service__title {
-	  font-size: 1.6em;
-	  font-weight: bold;
-	  color: #ffffff; /* Цвет заголовка */
-	  margin-bottom: 10px;
-	  text-transform: uppercase;
- }
- 
- .service__description {
-	  font-size: 1.1em;
-	  color: #7f8c8d; /* Цвет для описания */
-	  margin-bottom: 15px;
- }
- 
- .service__price {
-	  font-size: 1.4em;
-	  font-weight: bold;
-	  color: #020101; /* Цвет для цены */
-	  margin-top: auto; /* Выровнять по нижней части */
-	  align-self: flex-end; /* Выравнивание цены справа */
- }
- 
- .service__item:hover .service__price {
-	  color: #f39c12; /* Изменение цвета цены при наведении */
- }
- 
- /* Адаптивные стили */
- @media (max-width: 768px) {
-	  .service__item {
-			width: calc(50% - 20px); /* Два элемента в строке на мобильных устройствах */
-	  }
- }
- 
- @media (max-width: 480px) {
-	  .service__item {
-			width: 100%; /* Один элемент в строке на очень маленьких экранах */
-	  }
- }
+/* Текст на оверлее */
+.barber__overlay-text {
+	color: #fff;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 10px;
+	transition: transform 0.3s ease-in-out;
+	transform: scale(0.9);          /* Легкий эффект уменьшения */
+}
+
+.team__item:hover .barber__overlay-text {
+	transform: scale(1);            /* Увеличение текста на оверлее */
+}
+
  /* Стили для подвала */
  .footer {
 	  background-color: rgba(214,225,229, 0.8); /*  фон */
@@ -306,4 +250,89 @@ header {
 			width: 40px;
 			height: 40px;
 	  }
+ }
+  /* Тёмная тема: общий стиль */
+body.dark-theme {
+	background-color: #121212;
+	color: #ffffff;
+ }
+ /*Кнопка для переключения темы*/
+ .theme-toggle-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+ }
+ 
+ .theme-toggle-btn:hover {
+	background-color: #0056b3;
+ }
+ 
+ /* Тёмная тема для заголовков */
+ body.dark-theme h1, 
+ body.dark-theme h2, 
+ body.dark-theme h3 {
+	color: #ffffff;
+ }
+ 
+ /* Тёмная тема для навигации */
+ body.dark-theme .navbar {
+	background-color: rgba(50, 50, 50, 0.8);
+ }
+ 
+ body.dark-theme .nav-list a {
+	color: #ffffff; /* Ссылки в меню */
+ }
+ 
+ /* Тёмная тема для первого блока */
+ body.dark-theme .advertisement {
+	background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg);
+	color: #f4f4f4; /* Белый текст */
+ }
+ 
+ body.dark-theme .advertisement::before {
+	background: rgba(0, 0, 0, 0.7); /* Более тёмный слой */
+ }
+ 
+ /* Тёмная тема для услуг */
+ body.dark-theme .services {
+	background-color: #1a1a1a;
+ }
+ 
+ body.dark-theme .service__item {
+	background-color: rgba(255, 255, 255, 0.1); /* Тёмный фон */
+	color: #ffffff; /* Белый текст */
+ }
+ 
+ body.dark-theme .service__item:hover {
+	transform: translateY(-10px);
+ }
+ 
+ body.dark-theme .service__price {
+	color: #ffd700; /* Золотой цвет цены */
+ }
+ 
+ body.dark-theme .service__item:hover .service__price {
+	color: #ff9900; /* Оранжевый при наведении */
+ }
+ 
+ /* Тёмная тема для подвала */
+ body.dark-theme .footer {
+	background-color: rgba(40, 40, 40, 0.8);
+	color: #ffffff;
+ }
+ 
+ body.dark-theme .footer__image {
+	filter: brightness(0.8); /* Затемнение изображений */
+ }
+ 
+ body.dark-theme .footer__image:hover {
+	filter: brightness(1); /* Увеличение яркости при наведении */
  }
