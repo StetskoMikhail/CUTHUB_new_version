@@ -155,7 +155,7 @@ body {
 	}
 }
  /* Тёмная тема: общий стиль */
- body.dark-theme {
+body.dark-theme {
 	background-color: #121212;
 	color: #ffffff;
  }
@@ -239,3 +239,34 @@ body {
  body.dark-theme .footer__image:hover {
 	filter: brightness(1); /* Увеличение яркости при наведении */
  }
+
+/*Для увел. карточек*/
+.modal {
+	display: none; /* Скрываем модальное окно по умолчанию */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+	justify-content: center;
+	align-items: center;
+	z-index: 1000; /* Помещаем модальное окно поверх других элементов */
+}
+
+/* Стиль для изображения в модальном окне */
+.modal-content {
+	max-width: 90%;
+	max-height: 90%;
+}
+
+.gallery-img {
+	width: 100%; /* Все изображения по умолчанию адаптивные */
+	cursor: pointer; /* Указатель при наведении на изображения */
+	transition: transform 0.3s ease; /* Плавный эффект при увеличении */
+}
+
+/* Эффект увеличения при наведении */
+.gallery-img:hover {
+	transform: scale(1.05);
+}

@@ -69,36 +69,37 @@ body {
 	font-size: 2.5em;
 	color: #333;
 	margin-bottom: 20px;
-	text-align: center; 
+	text-align: center;
 }
 
 .news-container {
 	display: flex;
 	flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
 	gap: 20px;       /* Отступы между карточками */
-	justify-content: center; /*выровнены по центру контейнера */
+	justify-content: center; /* Выровнены по центру контейнера */
 	padding: 20px;
-	background-color: #1e1e1e; 
+	background-color: #1e1e1e;
 }
 
 .news-item {
 	background-color: #2a2a2a;
 	color: #fff;
-	width: 300px; /*зафиксированная ширина карточек*/
+	width: 300px; /* Зафиксированная ширина карточек */
 	border-radius: 10px; /* Скругление углов карточки */
-	overflow: hidden; /*выходящее за границы элемента, будет скрыто*/
+	overflow: hidden; /* Выходящее за границы элемента будет скрыто */
 	text-align: center;
+	padding: 20px;
 }
 
 .news-item img {
-	width: 100%; /*картинка будет по всей ширине контейнера*/
-	height: 200px; /*высота всех карточек*/
-	object-fit: cover; /*для сохранения пропорции*/
+	width: 100%; /* Картинка будет по всей ширине контейнера */
+	height: 200px; /* Высота всех карточек */
+	object-fit: cover; /* Для сохранения пропорции */
 }
 
 .news-item h3 {
 	color: #ff8c42;
-	font-size: 1.2em;	
+	font-size: 1.2em;
 	margin: 10px 0;
 }
 
@@ -112,17 +113,27 @@ body {
 	padding: 0 10px 15px;
 }
 
-.news-item a { /*Кнопка подробнее*/
+/* Стилизация кнопки "Подробнее" */
+.news-item button.details-btn {
 	display: inline-block;
-	color: #ff8c42;
-	text-decoration: none; /* Убираем подчеркивание по умолчанию */
-	margin-bottom: 10px;
+	background: linear-gradient(135deg, #ff8c42, #f68b2e);
+	color: #fff;
+	border: none;
+	border-radius: 25px; /* Округлые углы */
+	padding: 10px 20px;
 	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+	transition: all 0.3s ease; /* Плавные переходы для эффектов */
+	margin-bottom: 10px;
 }
 
-.news-item a:hover {
-	text-decoration: underline; /* Добавляем подчеркивание при наведении */
+.news-item button.details-btn:hover {
+	background: linear-gradient(135deg, #f68b2e, #ff8c42); /* Изменение фона при наведении */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавление тени при наведении */
 }
+
+
 /* Стили для футера */
 .footer {
 	background-color: #000; 

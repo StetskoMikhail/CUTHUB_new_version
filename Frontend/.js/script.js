@@ -43,3 +43,53 @@ scrollUpButton.addEventListener('click', function () {
     behavior: 'smooth'
   });
 });
+
+//Код для увел.карточек
+
+// Получаем все изображения в галерее
+const galleryImages = document.querySelectorAll('.gallery-item img');
+
+// Создаем модальное окно и элемент для изображения
+const modal = document.createElement('div');
+modal.classList.add('modal');
+document.body.appendChild(modal);
+
+const modalContent = document.createElement('img');
+modalContent.classList.add('modal-content');
+modal.appendChild(modalContent);
+
+// Добавляем обработчик события на каждое изображение в галерее
+galleryImages.forEach(image => {
+    image.addEventListener('click', function() {
+        // Устанавливаем источник изображения в модальное окно
+        modalContent.src = image.src;
+
+        // Показываем модальное окно
+        modal.style.display = 'flex';
+    });
+});
+
+//Для кнопки подробнее
+
+// Добавляем обработчик для закрытия модального окна при клике
+modal.addEventListener('click', function() {
+    modal.style.display = 'none';
+});
+
+// Получаем все кнопки "Подробнее"
+const detailButtons = document.querySelectorAll('.details-btn');
+
+// Добавляем обработчик кликов для каждой кнопки
+detailButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    // Находим скрытую информацию рядом с кнопкой
+    const extraInfo = this.nextElementSibling;
+
+    // Переключаем видимость дополнительной информации
+    if (extraInfo.style.display === 'none' || extraInfo.style.display === '') {
+      extraInfo.style.display = 'block'; // Показываем информацию
+    } else {
+      extraInfo.style.display = 'none'; // Скрываем информацию
+    }
+  });
+});
