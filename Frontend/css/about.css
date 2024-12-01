@@ -97,20 +97,20 @@ body {
 	background-color: #f5f5f5; 
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
-	text-align: center; /* Центрирование текста всего блока */
+	text-align: center; 
 }
 .about-us h1 {
-	font-size: 2.5em;
+	font-size: 2.5em; /*увел. в 2.5 раза текст*/
 	color: #333;
-	margin-bottom: 20px;
-	text-align: center; /* Центрирование заголовка */
+	margin-bottom: 20px; /*отступ*/
+	text-align: center;
 }
 .about-us p {
 	font-size: 1.2em;
 	color: #555;
 	margin-bottom: 15px;
 	text-align: left; /* Текст абзацев выровнен по левому краю */
-	padding: 0 10px; /* Немного отступов внутри абзаца */
+	padding: 0 10px; /*верхний и нижний отступы будут равны 0, а левый и правый отступы — 10 пикселей*/
 }
 
 /* Новости и акции */
@@ -118,16 +118,16 @@ body {
 	font-size: 2.5em;
 	color: #333;
 	margin-bottom: 20px;
-	text-align: center; /* Центрирование заголовка */
+	text-align: center; 
 }
 
 .news-container {
 	display: flex;
 	flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
 	gap: 20px;       /* Отступы между карточками */
-	justify-content: center; /* Центрирование карточек */
+	justify-content: center; /*выровнены по центру контейнера */
 	padding: 20px;
-	background-color: #1e1e1e; /*Задний фон черный*/
+	background-color: #1e1e1e; 
 }
 
 .news-item {
@@ -135,9 +135,8 @@ body {
 	color: #fff;
 	width: 300px; /*зафиксированная ширина карточек*/
 	border-radius: 10px; /* Скругление углов карточки */
-	overflow: hidden;
+	overflow: hidden; /*выходящее за границы элемента, будет скрыто*/
 	text-align: center;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .news-item img {
@@ -148,7 +147,7 @@ body {
 
 .news-item h3 {
 	color: #ff8c42;
-	font-size: 1.2em;
+	font-size: 1.2em;	
 	margin: 10px 0;
 }
 
@@ -175,14 +174,14 @@ body {
 }
 /* Стили для футера */
 .footer {
-	background-color: #000; /* Черный фон для футера */
-	color: #fff; /* Белый текст */
-	text-align: center; /* Центрируем содержимое по умолчанию */
-	padding: 20px 0; /* Отступы сверху и снизу */
-	font-size: 1.2em; /* Размер шрифта */
+	background-color: #000; 
+	color: #fff; 
+	text-align: center; 
+	padding: 20px 0; 
+	font-size: 1.2em; 
 	position: relative; /* Позиционирование футера */
 	bottom: 0; /* Устанавливаем футер внизу */
-	width: 100%; /* Футер на всю ширину */
+	width: 100%; 
 }
  /* Адаптивные стили */
  @media (max-width: 768px) {
@@ -198,9 +197,9 @@ body {
 }
  /* Стили для подвала */
  .footer {
-	background-color: rgba(214,225,229, 0.8); /*  фон */
-	color: #000000; /* текст */
-	padding: 20px 0; /* Отступы сверху и снизу */
+	background-color: rgba(214,225,229, 0.8);
+	color: #000000; 
+	padding: 20px 0; 
 	text-align: center;
 }
 
@@ -236,7 +235,7 @@ body {
 }
 
 .footer__right {
-	font-size: 18px; /* Размер шрифта для текста */
+	font-size: 18px; 
 	font-weight: bold;
 }
 
