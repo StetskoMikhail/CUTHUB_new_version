@@ -78,16 +78,48 @@ body {
     object-fit: cover; /* Изображение обрезается, чтобы заполнить блок */
 }
 
-/* Футер */
+/* Подвал */
 .footer {
-    background-color: #000; /* Черный фон для футера */
-    color: #fff; /* Белый текст */
-    text-align: center; /* Центрируем содержимое по умолчанию */
-    padding: 20px 0; /* Отступы сверху и снизу */
-    font-size: 1.2em; /* Размер шрифта */
-    position: relative; /* Позиционирование футера */
-    bottom: 0; /* Устанавливаем футер внизу */
-    width: 100%; /* Футер на всю ширину */
+    background-color: rgba(214,225,229, 0.8);
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__left {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer__link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer__image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.footer__image:hover {
+    transform: scale(1.1);
+}
+
+.footer__right {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* Адаптивные стили */
@@ -162,23 +194,29 @@ body.dark-theme {
     color: #ffffff;
 }
 
-/* Кнопка для переключения темы */
+/* Кнопка переключения темы */
 .theme-toggle-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #ffffff;
+    bottom: 30px;
+    right: 30px; /* Размещаем кнопку в правом нижнем углу */
+    background-color: #f39c12;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .theme-toggle-btn:hover {
-    background-color: #0056b3;
+    background-color: #e67e22; /* Немного темнее на hover */
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+}
+
+.theme-toggle-btn:focus {
+    outline: none; /* Убираем рамку при фокусе */
 }
 
 /* Тёмная тема для заголовков */
