@@ -93,6 +93,10 @@ header {
 	  gap: 20px; /* Отступы между элементами */
 	  justify-content: space-between;
  }
+ .section_title {
+	text-align: center; /* Центрируем текст внутри элемента */
+	color: #ffffff; 
+ }
  
  /* Фон в виде картинки для секции */
  .services {
