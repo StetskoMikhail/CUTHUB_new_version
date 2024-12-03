@@ -1,350 +1,354 @@
 /* Общие стили */
 header {
-    margin: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: Arial, sans-serif;
+    margin: 0; /* Убираем отступы по умолчанию */
+    background-repeat: no-repeat; /* Запрещаем повторение фона */
+    background-size: cover; /* Фон растягивается на весь блок */
+    background-attachment: fixed; /* Фон фиксируется при прокрутке */
+    font-family: Arial, sans-serif; /* Задаем шрифт */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Устанавливаем шрифт для всего тела */
+    background-color: #f4f4f4; /* Светлый фон */
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем отступы по умолчанию */
 }
 
 /* Navbar */
 .navbar {
-    display: flex;
-    align-items: center;
-    background-color: rgba(214, 225, 229, 0.8);
-    height: 120px;
-    justify-content: center;
+    display: flex; /* Используем flexbox для навигации */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    background-color: rgba(214, 225, 229, 0.8); /* Полупрозрачный фон */
+    height: 120px; /* Высота навигации */
+    justify-content: center; /* Центрируем элементы по горизонтали */
 }
 
 .navbar img {
-    max-width: 220px;
-    height: 100px;
-    margin-right: 300px;
+    max-width: 220px; /* Ограничиваем максимальную ширину логотипа */
+    height: 100px; /* Устанавливаем высоту логотипа */
+    margin-right: 300px; /* Отступ справа */
 }
 
 .nav-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    font-size: 18px;
+    list-style: none; /* Убираем маркеры у списка */
+    padding: 0; /* Убираем внутренние отступы */
+    display: flex; /* Используем flexbox для элементов списка */
+    font-size: 18px; /* Размер шрифта для ссылок */
 }
 
 .nav-list li {
-    margin-left: 20px;
+    margin-left: 20px; /* Отступы между элементами списка */
 }
 
 .nav-list a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+    color: rgb(0, 0, 0); /* Черный цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
 }
 
 /* Заголовок и описание */
 .team_title {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #333;
-    margin: 0.5em 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    font-size: 2.5em; /* Размер шрифта заголовка */
+    font-weight: bold; /* Жирное начертание текста */
+    color: #333; /* Цвет текста */
+    margin: 0.5em 0; /* Отступы сверху и снизу */
+    flex-direction: column; /* Расположение элементов в колонку */
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    text-align: center; /* Выравнивание текста по центру */
 }
 
 .team_descr {
-    font-size: 1.5em;
-    color: #777;
-    margin: 0.5em 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    font-size: 1.5em; /* Размер шрифта для описания */
+    color: #777; /* Цвет текста */
+    margin: 0.5em 0; /* Отступы сверху и снизу */
+    flex-direction: column; /* Расположение элементов в колонку */
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    text-align: center; /* Выравнивание текста по центру */
 }
 
 /* Карточки барберов */
 .team__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 0;
-    list-style: none;
-    margin: 0;
+    display: flex; /* Используем flexbox для размещения карточек */
+    flex-wrap: wrap; /* Перенос карточек на новую строку */
+    justify-content: space-between; /* Равномерное распределение карточек */
+    gap: 20px; /* Отступы между карточками */
+    padding: 0; /* Убираем внутренние отступы */
+    list-style: none; /* Убираем маркеры у списка */
+    margin: 0; /* Убираем внешние отступы */
 }
 
 .team__item {
-    background-color: transparent;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Без рамки */
+    border-radius: 20px; /* Скругленные углы */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Тень вокруг карточки */
+    overflow: hidden; /* Обрезаем содержимое, выходящее за пределы */
+    text-align: center; /* Выравнивание текста по центру */
+    position: relative; /* Относительное позиционирование */
+    flex: 1 1 calc(33.333% - 20px); /* Ширина карточки — треть родительского элемента */
+    max-width: calc(33.333% - 20px); /* Максимальная ширина карточки */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавное изменение трансформации и тени */
+    display: flex; /* Flexbox для содержания карточки */
+    flex-direction: column; /* Элементы карточки располагаются в колонку */
+    justify-content: center; /* Центрируем элементы по вертикали */
+    align-items: center; /* Центрируем элементы по горизонтали */
 }
 
 .team__item:hover {
-    transform: scale(1.08);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    transform: scale(1.08); /* Увеличение карточки при наведении */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Увеличенная тень при наведении */
 }
 
 .team__item img {
-    max-width: 100%;
-    height: 360px;
-    border-radius: 50%;
-    transition: transform 0.3s;
+    max-width: 100%; /* Ширина изображения — 100% от родительского элемента */
+    height: 360px; /* Фиксированная высота изображения */
+    border-radius: 50%; /* Круглая форма изображения */
+    transition: transform 0.3s; /* Плавное изменение масштаба изображения */
 }
 
 .team__item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Увеличение изображения при наведении */
 }
 
 .barber_name {
-    margin-top: 15px;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-    transition: color 0.3s;
-    text-align: center;
+    margin-top: 15px; /* Отступ сверху */
+    font-size: 1.5em; /* Размер шрифта имени */
+    font-weight: bold; /* Жирное начертание имени */
+    color: #333; /* Цвет текста */
+    transition: color 0.3s; /* Плавное изменение цвета */
+    text-align: center; /* Выравнивание текста по центру */
 }
 
 .team__item:hover .barber_name {
-    color: #ff6f61;
+    color: #ff6f61; /* Цвет текста при наведении */
 }
 
 .barber__position {
-    font-size: 1.2em;
-    color: #777;
-    margin-bottom: 15px;
-    transition: color 0.3s;
+    font-size: 1.2em; /* Размер шрифта для должности */
+    color: #777; /* Цвет текста */
+    margin-bottom: 15px; /* Отступ снизу */
+    transition: color 0.3s; /* Плавное изменение цвета */
 }
 
 .team__item:hover .barber__position {
-    color: #ff3b2f;
+    color: #ff3b2f; /* Цвет текста при наведении */
 }
 
 .book-btn {
-    background-color: #ff6f61;
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 10px;
+    background-color: #ff6f61; /* Фоновый цвет кнопки */
+    border: none; /* Без рамки */
+    border-radius: 30px; /* Скругленные углы */
+    color: #fff; /* Белый цвет текста */
+    padding: 12px 25px; /* Внутренние отступы */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: background-color 0.3s, transform 0.3s; /* Плавные изменения */
+    cursor: pointer; /* Курсор в виде указателя */
+    display: inline-block; /* Выравнивание по строке */
+    margin-top: 10px; /* Отступ сверху */
 }
 
 .book-btn:hover {
-    background-color: #ff3b2f;
-    transform: translateY(-3px);
+    background-color: #ff3b2f; /* Цвет фона при наведении */
+    transform: translateY(-3px); /* Поднятие кнопки при наведении */
 }
 
 /* Оверлей (при наведении) */
 .barber__overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+    display: flex; /* Flexbox для центрирования содержимого */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    opacity: 0; /* Скрыть оверлей по умолчанию */
+    position: absolute; /* Абсолютное позиционирование */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1;
+    width: 100%; /* Ширина 100% от родительского элемента */
+    height: 100%; /* Высота 100% от родительского элемента */
+    transition: opacity 0.3s ease-in-out; /* Плавное появление */
+    z-index: 1; /* Устанавливаем оверлей поверх других элементов */
 }
 
 .team__item:hover .barber__overlay {
-    opacity: 1;
+    opacity: 1; /* Показываем оверлей при наведении */
 }
 
 .barber__overlay-text {
-    color: #fff;
-    font-size: 1.2em;
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.3s ease-in-out;
-    transform: scale(0.9);
+    color: #fff; /* Белый цвет текста */
+    font-size: 1.2em; /* Размер шрифта */
+    text-align: center; /* Выравнивание по центру */
+    padding: 10px; /* Внутренние отступы */
+    transition: transform 0.3s ease-in-out; /* Плавное изменение */
+    transform: scale(0.9); /* Меньший размер текста по умолчанию */
 }
 
 .team__item:hover .barber__overlay-text {
-    transform: scale(1);
+    transform: scale(1); /* Восстановление нормального размера текста при наведении */
 }
 
 /* Подвал */
 .footer {
-    background-color: rgba(214, 225, 229, 0.8);
-    color: #000000;
-    padding: 20px 0;
-    text-align: center;
+    background-color: rgba(214, 225, 229, 0.8); /* Полупрозрачный фон */
+    color: #000000; /* Черный текст */
+    padding: 20px 0; /* Отступы сверху и снизу */
+    text-align: center; /* Выравнивание текста по центру */
 }
 
 .footer__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex; /* Используем flexbox для распределения контента */
+    justify-content: space-between; /* Равномерное распределение */
+    align-items: center; /* Центрирование по вертикали */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование по горизонтали */
 }
 
 .footer__left {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    display: flex; /* Используем flexbox для левой части */
+    justify-content: space-between; /* Равномерное распределение элементов */
+    gap: 15px; /* Отступы между элементами */
 }
 
 .footer__link {
-    display: inline-block;
-    text-decoration: none;
+    display: inline-block; /* Строковое отображение */
+    text-decoration: none; /* Убираем подчеркивание */
 }
 
 .footer__image {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+    width: 50px; /* Размер изображения */
+    height: 50px; /* Размер изображения */
+    object-fit: cover; /* Изображение заполняет контейнер */
+    border-radius: 5px; /* Скругленные углы изображения */
+    transition: transform 0.3s ease; /* Плавное изменение */
 }
 
 .footer__image:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Увеличение изображения при наведении */
 }
 
 .footer__right {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 18px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
 }
 
-/* Кнопка переключения темы */
 .theme-toggle-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #ffffff;
+    bottom: 30px;
+    right: 30px; /* Размещаем кнопку в правом нижнем углу */
+    background-color: #f39c12;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .theme-toggle-btn:hover {
-    background-color: #0056b3;
+    background-color: #e67e22; /* Немного темнее на hover */
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+}
+
+.theme-toggle-btn:focus {
+    outline: none; /* Убираем рамку при фокусе */
 }
 
 /* Адаптивность */
 @media (max-width: 1024px) {
     .navbar img {
-        margin-right: 50px;
-        height: 80px;
+        margin-right: 50px; /* Уменьшаем отступ справа */
+        height: 80px; /* Уменьшаем высоту логотипа */
     }
     .nav-list {
-        font-size: 16px;
+        font-size: 16px; /* Уменьшаем размер шрифта */
     }
     .team__list {
-        gap: 15px;
+        gap: 15px; /* Уменьшаем отступы между карточками */
     }
     .team__item {
-        flex: 1 1 calc(50% - 15px);
-        max-width: calc(50% - 15px);
+        flex: 1 1 calc(50% - 15px); /* Увеличиваем ширину карточек */
+        max-width: calc(50% - 15px); /* Максимальная ширина карточек */
     }
     .book-btn {
-        font-size: 14px;
-        padding: 10px 20px;
+        font-size: 14px; /* Уменьшаем размер шрифта */
+        padding: 10px 20px; /* Уменьшаем отступы */
     }
     .footer__image {
-        width: 40px;
-        height: 40px;
+        width: 40px; /* Уменьшаем размер изображения */
+        height: 40px; /* Уменьшаем размер изображения */
     }
     .theme-toggle-btn {
-        top: 10px;
-        right: 10px;
-        font-size: 14px;
-        padding: 8px 16px;
+        top: 10px; /* Отступ сверху */
+        right: 10px; /* Отступ справа */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+        padding: 8px 16px; /* Уменьшаем отступы */
     }
 }
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
+        flex-direction: column; /* Переводим навигацию в колонку */
+        height: auto; /* Автоматическая высота */
+        padding: 10px; /* Внутренние отступы */
     }
     .navbar img {
-        margin-right: 0;
-        margin-bottom: 10px;
+        margin-right: 0; /* Убираем отступ справа */
+        margin-bottom: 10px; /* Добавляем отступ снизу */
     }
     .nav-list {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Переводим список в колонку */
+        align-items: center; /* Выравнивание по центру */
     }
     .nav-list li {
-        margin: 10px 0;
+        margin: 10px 0; /* Добавляем отступы между элементами */
     }
     .team__list {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: column; /* Располагаем карточки в колонку */
+        gap: 20px; /* Увеличиваем отступы */
     }
     .team__item {
-        flex: 1 1 100%;
-        max-width: 100%;
+        flex: 1 1 100%; /* Задаем 100% ширины */
+        max-width: 100%; /* Максимальная ширина 100% */
     }
     .team__item img {
-        height: auto;
-        max-width: 80%;
+        height: auto; /* Автоматическая высота */
+        max-width: 80%; /* Ограничиваем ширину */
     }
     .footer__content {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Располагаем элементы в колонку */
+        align-items: center; /* Выравнивание по центру */
     }
     .footer__right {
-        margin-top: 15px;
+        margin-top: 15px; /* Добавляем отступ сверху */
     }
     .theme-toggle-btn {
-        top: 10px;
-        right: 10px;
-        font-size: 14px;
-        padding: 8px 16px;
+        top: 10px; /* Отступ сверху */
+        right: 10px; /* Отступ справа */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+        padding: 8px 16px; /* Уменьшаем отступы */
     }
 }
 
 @media (max-width: 480px) {
     .team_title {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Уменьшаем размер шрифта */
     }
     .team_descr {
-        font-size: 1.2em;
+        font-size: 1.2em; /* Уменьшаем размер шрифта */
     }
     .book-btn {
-        padding: 8px 15px;
-        font-size: 12px;
+        padding: 8px 15px; /* Уменьшаем отступы */
+        font-size: 12px; /* Уменьшаем размер шрифта */
     }
     .footer__image {
-        width: 30px;
-        height: 30px;
+        width: 30px; /* Уменьшаем размер изображения */
+        height: 30px; /* Уменьшаем размер изображения */
     }
     .theme-toggle-btn {
-        top: 10px;
-        right: 10px;
-        font-size: 12px;
-        padding: 6px 12px;
+        top: 10px; /* Отступ сверху */
+        right: 10px; /* Отступ справа */
+        font-size: 12px; /* Уменьшаем размер шрифта */
+        padding: 6px 12px; /* Уменьшаем отступы */
     }
 }
