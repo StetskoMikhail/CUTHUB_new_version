@@ -93,3 +93,4 @@ detailButtons.forEach(button => {
     }
   });
 });
+

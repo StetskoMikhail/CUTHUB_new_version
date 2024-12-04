@@ -1,326 +1,354 @@
+/* Основные стили */
 header {
-	margin: 0; /* Убираем отступы по умолчанию у body */
-	background-repeat: no-repeat; 
-	background-size: cover;    
-	background-attachment: fixed; 
-	font-family: Arial, sans-serif;
- }
+    margin: 0;
+    background-repeat: no-repeat; 
+    background-size: cover;    
+    background-attachment: fixed; 
+    font-family: Arial, sans-serif;
+}
  
- body {
-	font-family: Arial, sans-serif;
-	background-color: #f4f4f4;
-	margin: 0;
-	padding: 0;
- }
- .navbar {
-	display: flex;
-	align-items: center;
-	background-color: rgba(214,225,229, 0.8); /* Полупрозрачный черный фон */
-	height: 120px;
-	justify-content: center; /* Центрируем содержимое */
- }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(214,225,229, 0.8); /* Полупрозрачный фон */
+    height: 120px;
+    justify-content: center; /* Центрируем содержимое */
+    flex-wrap: wrap; /* Разрешаем оборачивание на мобильных устройствах */
+    padding: 0 20px;
+}
  
- .navbar img {
-	max-width: 220px;
-	height: 100px;
-	margin-right: 300px; /* Отодвигаем логотип влево */
- }
- 
- .nav-list {
-	list-style: none; /* Убираем маркеры списка */
-	padding: 0;
-	display: flex; /* Используем flexbox для горизонтального расположения */
-	font-size: 18px;
- }
- 
- .nav-list li {
-	margin-left: 20px; /* Отступ между пунктами меню */
- }
- 
- .nav-list a {
-	color: rgb(0, 0, 0); /* Цвет текста ссылок */
-	text-decoration: none; /* Убираем подчеркивание */
- }
- /*Стили для первого блока О НАС в index.html*/
- .advertisement {
-	position: relative; /* Для добавления слоёв */
-	background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg);
-	background-size: cover;
-	background-attachment: fixed; /* Фон остаётся фиксированным при прокрутке */
-	background-position: center;
-	color: #ffffff; /* Белый текст */
-	text-align: left; /* Выравнивание текста по левому краю */
-	padding: 200px 20px;
+.navbar img {
+    max-width: 220px;
+    height: 100px;
+    margin-right: 20px; /* Отодвигаем логотип */
+    flex: 1;
 }
 
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 18px;
+    margin-left: auto; /* Сдвигаем меню вправо */
+}
+ 
+.nav-list li {
+    margin-left: 20px;
+}
+ 
+.nav-list a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+/* Стили для первого блока О НАС */
+.advertisement {
+    position: relative;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff;
+    text-align: left;
+    padding: 200px 20px;
+}
 .advertisement::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный слой */
-	z-index: 1; /* Помещаем слой под текстом */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
-
 .advertisement_title,
 .advertisement_slogan,
 .advertisement_address,
 .advertisement_contact {
-	position: relative; /* Чтобы текст был поверх затемнённого слоя */
-	z-index: 2;
-	margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
 }
-
 .advertisement_title {
-	font-size: 3.5em;
-	font-weight: bold;
+    font-size: 3.5em;
+    font-weight: bold;
 }
-
 .advertisement_slogan {
-	font-size: 1.8em;
+    font-size: 1.8em;
 }
-
 .advertisement_address,
 .advertisement_contact {
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
- /* Стили для списка услуг */
- .services__list {
-	  display: flex;
-	  flex-wrap: wrap;
-	  gap: 20px; /* Отступы между элементами */
-	  justify-content: space-between;
- }
- 
- /* Фон в виде картинки для секции */
- .services {
-	background-color: #000; /* Чёрный фон для секции */
-	  background-size: cover; /* Картинка будет покрывать весь блок */
-	  background-position: center; /* Центрирование картинки */
-	  background-attachment: fixed; /* Фиксированное положение фона */
-	  padding: 50px 0; /* Отступы сверху и снизу */
- }
- 
- /* Стили для каждого элемента услуги */
- .service__item {
-	  display: flex;
-	  flex-direction: column; /* Элементы внутри блока будут располагаться вертикально */
-	  background-color: rgba(255, 255, 255, 0.9); /* Белый фон с прозрачностью для контраста с фоном */
-	  border-radius: 8px;
-	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	  padding: 20px;
-	  width: calc(33.333% - 20px); /* Три элемента в строке на большом экране */
-	  text-align: left;
-	  transition: transform 0.3s;
- }
- 
- .service__item:hover {
-	  transform: translateY(-10px); /* Лёгкое поднятие при наведении */
- }
- 
- .service__title {
-	  font-size: 1.6em;
-	  font-weight: bold;
-	  color: #ffffff; /* Цвет заголовка */
-	  margin-bottom: 10px;
-	  text-transform: uppercase;
- }
- 
- .service__description {
-	  font-size: 1.1em;
-	  color: #7f8c8d; /* Цвет для описания */
-	  margin-bottom: 15px;
- }
- 
- .service__price {
-	  font-size: 1.4em;
-	  font-weight: bold;
-	  color: #020101; /* Цвет для цены */
-	  margin-top: auto; /* Выровнять по нижней части */
-	  align-self: flex-end; /* Выравнивание цены справа */
- }
- 
- .service__item:hover .service__price {
-	  color: #f39c12; /* Изменение цвета цены при наведении */
- }
- 
- /* Адаптивные стили */
- @media (max-width: 768px) {
-	  .service__item {
-			width: calc(50% - 20px); /* Два элемента в строке на мобильных устройствах */
-	  }
- }
- 
- @media (max-width: 480px) {
-	  .service__item {
-			width: 100%; /* Один элемент в строке на очень маленьких экранах */
-	  }
- }
- /* Стили для подвала */
- .footer {
-	  background-color: rgba(214,225,229, 0.8); /*  фон */
-	  color: #000000; /* текст */
-	  padding: 20px 0; /* Отступы сверху и снизу */
-	  text-align: center;
- }
- 
- .footer__content {
-	  display: flex;
-	  justify-content: space-between; /* Размещение блоков слева и справа */
-	  align-items: center;
-	  max-width: 1200px;
-	  margin: 0 auto; /* Центрирование подвала */
- }
- 
- .footer__left {
-	  display: flex;
-	  justify-content: space-between;
-	  gap: 15px; /* Отступы между изображениями */
- }
- 
- .footer__link {
-	  display: inline-block;
-	  text-decoration: none; /* Убираем подчеркивание */
- }
- 
- .footer__image {
-	  width: 50px; /* Ширина изображений */
-	  height: 50px; /* Высота изображений */
-	  object-fit: cover; /* Сохранение пропорций изображений */
-	  border-radius: 5px; /* Скругление углов */
-	  transition: transform 0.3s ease; /* Плавный переход при наведении */
- }
- 
- .footer__image:hover {
-	  transform: scale(1.1); /* Увеличение изображения при наведении */
- }
- 
- .footer__right {
-	  font-size: 18px; /* Размер шрифта для текста */
-	  font-weight: bold;
- }
- 
- @media (max-width: 768px) {
-	  .footer__content {
-			flex-direction: column; /* Вертикальное расположение элементов на мобильных устройствах */
-			align-items: center;
-	  }
- 
-	  .footer__left {
-			margin-bottom: 15px;
-	  }
- 
-	  .footer__image {
-			width: 40px;
-			height: 40px;
-	  }
- }
 
- /* Тёмная тема: общий стиль */
+
+/* Кнопка переключения темы */
+.theme-toggle-btn {
+    position: fixed; /* Фиксированное положение */
+    bottom: 30px; /* Располагаем кнопку внизу */
+    right: 30px; /* Сдвигаем кнопку вправо */
+    background-color: #f39c12; /* Оранжевый фон */
+    color: white; /* Белый цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 50%; /* Круглая форма кнопки */
+    font-size: 18px; /* Размер шрифта */
+    padding: 15px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор в виде указателя */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+}
+
+.theme-toggle-btn:hover {
+    background-color: #e67e22; /* Темнее фон при наведении */
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+}
+
+.theme-toggle-btn:focus {
+    outline: none; /* Убираем рамку при фокусе */
+}
+
+/* Стили для списка услуг */
+.services__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+ 
+.services {
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px 0;
+}
+ 
+.service__item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    text-align: left;
+    transition: transform 0.3s;
+}
+ 
+.service__item:hover {
+    transform: translateY(-10px);
+}
+ 
+.service__title {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+ 
+.service__description {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+ 
+.service__price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #020101;
+    margin-top: auto;
+    align-self: flex-end;
+}
+ 
+.service__item:hover .service__price {
+    color: #f39c12;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    /* Навигация */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .navbar img {
+        margin-right: 0;
+        max-width: 180px;
+        margin-bottom: 20px;
+    }
+    .nav-list {
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: center;
+    }
+    .nav-list li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+    
+    /* Секция об услугах */
+    .service__item {
+        width: calc(50% - 20px);
+    }
+}
+ 
+@media (max-width: 480px) {
+    .navbar img {
+        max-width: 150px;
+    }
+    .service__item {
+        width: 100%;
+    }
+    .advertisement {
+        padding: 120px 20px;
+    }
+}
+
+/* Тёмная тема */
 body.dark-theme {
-	background-color: #121212;
-	color: #ffffff;
- }
- /*Кнопка для переключения темы*/
- .theme-toggle-btn {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	padding: 10px 20px;
-	font-size: 16px;
-	background-color: #007bff;
-	color: #ffffff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
- }
- 
- .theme-toggle-btn:hover {
-	background-color: #0056b3;
- }
- 
- /* Тёмная тема для заголовков */
- body.dark-theme h1, 
- body.dark-theme h2, 
- body.dark-theme h3 {
-	color: #ffffff;
- }
- 
- /* Тёмная тема для навигации */
- body.dark-theme .navbar {
-	background-color: rgba(50, 50, 50, 0.8);
- }
- 
- body.dark-theme .nav-list a {
-	color: #ffffff; /* Ссылки в меню */
- }
- 
- /* Тёмная тема для первого блока */
- body.dark-theme .advertisement {
-	background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg);
-	color: #f4f4f4; /* Белый текст */
- }
- 
- body.dark-theme .advertisement::before {
-	background: rgba(0, 0, 0, 0.7); /* Более тёмный слой */
- }
- 
- /* Тёмная тема для услуг */
- body.dark-theme .services {
-	background-color: #1a1a1a;
- }
- 
- body.dark-theme .service__item {
-	background-color: rgba(255, 255, 255, 0.1); /* Тёмный фон */
-	color: #ffffff; /* Белый текст */
- }
- 
- body.dark-theme .service__item:hover {
-	transform: translateY(-10px);
- }
- 
- body.dark-theme .service__price {
-	color: #ffd700; /* Золотой цвет цены */
- }
- 
- body.dark-theme .service__item:hover .service__price {
-	color: #ff9900; /* Оранжевый при наведении */
- }
- 
- /* Тёмная тема для подвала */
- body.dark-theme .footer {
-	background-color: rgba(40, 40, 40, 0.8);
-	color: #ffffff;
- }
- 
- body.dark-theme .footer__image {
-	filter: brightness(0.8); /* Затемнение изображений */
- }
- 
- body.dark-theme .footer__image:hover {
-	filter: brightness(1); /* Увеличение яркости при наведении */
- }
- /*Скрол вверх*/
- .scroll-up-btn {
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	background-color: #827372; /* Цвет кнопки */
-	color: white;
-	border: none;
-	border-radius: 100%;
-	font-size: 15px;
-	padding: 20px;
-	cursor: pointer;
-	display: none; /* Кнопка изначально скрыта */
-	transition: background-color 0.3s, transform 0.3s;
- }
- 
- .scroll-up-btn:hover {
-	background-color: #000000; /* Цвет при наведении */
-	transform: scale(1.1); /* Эффект увеличения при наведении */
- }
- 
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme .navbar {
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+body.dark-theme .nav-list a {
+    color: #ffffff;
+}
+
+body.dark-theme .advertisement {
+    background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg);
+    color: #f4f4f4;
+}
+
+body.dark-theme .advertisement::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .services {
+    background-color: #1a1a1a;
+}
+
+body.dark-theme .service__item {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+body.dark-theme .service__item:hover {
+    transform: translateY(-10px);
+}
+
+body.dark-theme .service__price {
+    color: #ffd700;
+}
+
+body.dark-theme .service__item:hover .service__price {
+    color: #ff9900;
+}
+
+body.dark-theme .footer {
+    background-color: rgba(40, 40, 40, 0.8);
+    color: #ffffff;
+}
+
+body.dark-theme .footer__image {
+    filter: brightness(0.8);
+}
+
+body.dark-theme .footer__image:hover {
+    filter: brightness(1);
+}
+
+/* Подвал */
+.footer {
+    background-color: rgba(214,225,229, 0.8);
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__left {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer__link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer__image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.footer__image:hover {
+    transform: scale(1.1);
+}
+
+.footer__right {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .footer__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__left {
+        margin-bottom: 15px;
+    }
+
+    .footer__image {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Скрол вверх */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #827372;
+    color: white;
+    border: none;
+    border-radius: 100%;
+    font-size: 15px;
+    padding: 20px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-up-btn:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+}
+
+

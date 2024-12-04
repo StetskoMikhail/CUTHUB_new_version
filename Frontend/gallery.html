@@ -22,63 +22,57 @@
             </ul>
         </nav>
     </div>
-	 <button id="theme-toggle" class="theme-toggle-btn">Переключить тему</button>
 </header>
 
 <body>
-    <section class="gallery">
-        <h1>Галерея Барбершопа</h1>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src=".img\Галерея_1.jpeg">
-            </div>
-            <div class="gallery-item">
-                <img src=".img\Галерея_2.jpeg">
-            </div>
-            <div class="gallery-item">
-                <img src=".img\Галерея_3.jpeg">
-            </div>
-            <div class="gallery-item">
-                <img src=".img\Галерея_4.jpeg">
-            </div>
-				<div class="gallery-item">
-					<img src=".img\Галерея_5.jpg">
-			  </div>
-			  <div class="gallery-item">
-					<img src=".img\Галерея_6.jpeg">
-			  </div>
-			  <div class="gallery-item">
-					<img src=".img\Галерея_7.jpeg">
-			  </div>
-			  <div class="gallery-item">
-					<img src=".img\Галерея_8.jpeg">
-			  </div>
-        </div>
-    </section>
-	 <!-- Подвал сайта -->
-	 <footer class="footer">
-		<div class="container">
-		  <div class="footer__content">
-			 <!-- Левый блок с изображениями-ссылками -->
-			 <div class="footer__left">
-				<a href="https://www.instagram.com/nikitagosteev?igsh=YmZveG52ODB0YzEw" target="_blank" class="footer__link">
-				  <img src=".img/inst.jpg" alt="Image 1" class="footer__image">
-				</a>
-				<a href="https://vk.com/lemoonier" target="_blank" class="footer__link">
-				  <img src=".img/vk.jpg" alt="Image 2" class="footer__image">
-				</a>
-				<a href="https://www.viber.com/ru/download/" target="_blank" class="footer__link">
-				  <img src=".img/viber.jpg" alt="Image 3" class="footer__image">
-				</a>
-			 </div>
-	 
-			 <!-- Правый блок с текстом 2024 -->
-			 <div class="footer__right">
-				<p>&copy; 2024</p>
-			 </div>
-		  </div>
+	<div class="slider-container">
+		<div class="slider-text">
+			<h2>РАБОТЫ НАШЕГО БАРБЕРШОПА</h2>
 		</div>
-	 </footer>
-	 <script src=".js/script.js"></script>
+		<div class="slider-wrapper">
+			 <img src=".img\Галерея_1.jpg" class="slide">
+			 <img src=".img\Галерея_2.jpg" class="slide">
+			 <img src=".img\Галерея_3.jpg" class="slide">
+			 <img src=".img\Галерея_4.jpeg" class="slide">
+			 <img src=".img\Галерея_5.jpeg" class="slide">
+			 <img src=".img\Галерея_6.jpeg" class="slide">
+			 <img src=".img\Галерея_7.jpg"  class="slide">
+			 <img src=".img\Галерея_8.jpeg" class="slide">
+			 <img src=".img\Галерея_9.jpeg" class="slide">
+		</div>
+		    <div>
+		       <button class="slider-btn prev">❮</button>
+		       <button class="slider-btn next">❯</button>
+	       </div>
+	       <div class="instagram-link">
+		       <p><a href="https://www.instagram.com/nikitagosteev?igsh=YmZveG52ODB0YzEw" target="_blank">Больше работ в нашем Instagram >> </a></p>
+          </div>
+	   <script src=".js/slider.js"></script>
+	</div>
 </body>
+
+<footer class="footer">
+	<div class="container">
+	  <div class="footer__content">
+		 <!-- Левый блок с изображениями-ссылками -->
+		 <div class="footer__left">
+			<a href="https://www.instagram.com/nikitagosteev?igsh=YmZveG52ODB0YzEw" target="_blank" class="footer__link">
+			  <img src=".img/inst.jpg" alt="Image 1" class="footer__image">
+			</a>
+			<a href="https://vk.com/lemoonier" target="_blank" class="footer__link">
+			  <img src=".img/vk.jpg" alt="Image 2" class="footer__image">
+			</a>
+			<a href="https://www.viber.com/ru/download/" target="_blank" class="footer__link">
+			  <img src=".img/viber.jpg" alt="Image 3" class="footer__image">
+			</a>
+		 </div>
+ 
+		 <!-- Правый блок с текстом 2024 -->
+		 <div class="footer__right">
+			<p>&copy; 2024</p>
+		 </div>
+	  </div>
+	</div>
+ </footer>
+ <script src=".js/script.js"></script>
 </html>

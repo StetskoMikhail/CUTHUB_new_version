@@ -1,272 +1,243 @@
+/* Основные стили */
 header {
-	margin: 0; /* Убираем отступы по умолчанию у body */
-	background-repeat: no-repeat; 
-	background-size: cover;    
-	background-attachment: fixed; /* Фон остается на месте при прокрутке страницы */
-	font-family: Arial, sans-serif;
+    margin: 0; /* Убираем отступы по умолчанию у body */
+    background-repeat: no-repeat; 
+    background-size: cover;    
+    background-attachment: fixed; /* Фон остается на месте при прокрутке страницы */
+    font-family: Arial, sans-serif;
 }
 
 body {
-	font-family: Arial, sans-serif;
-	background-color: #f4f4f4;
-	margin: 0; /* Убираем внешние отступы */
-	padding: 0; /* Убираем внутренние отступы */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+	 overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
 }
+
+/* Навигация */
 .navbar {
-	display: flex;  /* Flexbox для горизонтального выравнивания */
-	align-items: center;
-	background-color: rgba(214,225,229, 0.8); /* Полупрозрачный черный фон */
-	height: 120px;
-	justify-content: center; /* Центрируем содержимое */
+    display: flex;  /* Flexbox для горизонтального выравнивания */
+    align-items: center;
+    background-color: rgba(214,225,229, 0.8); /* Полупрозрачный черный фон */
+    height: 120px;
+    justify-content: center; /* Центрируем содержимое */
+    flex-wrap: wrap; /* Разрешаем оборачивание на мобильных устройствах */
 }
 
 .navbar img {
-	max-width: 220px;
-	height: 100px;
-	margin-right: 300px; /* Отодвигаем логотип влево и Отступ вправо между логотипом и пунктами меню */
+    max-width: 220px;
+    height: 100px;
+    margin-right: 20px; /* Отодвигаем логотип */
 }
 
 .nav-list {
-	list-style: none; /* Убираем маркеры списка */
-	padding: 0; /* Убираем внутренние отступы */
-	display: flex; /* Используем flexbox для горизонтального расположения */
-	font-size: 18px;
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    font-size: 18px;
+    margin-left: auto; /* Выравнивание меню по правому краю */
 }
 
 .nav-list li {
-	margin-left: 20px; /* Отступ между пунктами меню */
+    margin-left: 20px; /* Отступ между пунктами меню */
 }
 
 .nav-list a {
-	color: rgb(0, 0, 0); /* Цвет текста ссылок */
+    color: rgb(0, 0, 0); /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Галерея */
+
+.slider-text {
+	margin-left: 30px; 
+}
+
+.slider {
+	position: relative;
+	max-width: 10px;
+	margin: 50px;
+	margin-left: 30px;
+	overflow: hidden;
+	border: 5px solid #ccc;
+	border-radius: 10px;
+}
+
+.slider-wrapper {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	margin-left: 30px;
+	justify-content: flex-start;
+}
+
+.slide {
+	min-width: 510px;
+	height: auto;
+	object-fit: cover;
+}
+
+.slider-btn {
+	position: absolute;
+	top: 67%;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	font-size: 24px;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.slider-btn.prev {
+	left: 10px;
+}
+
+.slider-btn.next {
+	right: 10px;
+}
+
+.slider-btn:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Стили для текста с ссылкой */
+.instagram-link {
+	text-align: center; /* Центрируем текст */
+	margin-top: 20px; /* Отступ сверху */
+	font-size: 18px; /* Размер шрифта */
+	font-weight: bold; /* Полужирный текст */
+}
+
+.instagram-link a {
+	color: #000; /* Цвет ссылки */
 	text-decoration: none; /* Убираем подчеркивание */
 }
 
-/* Основные стили для галереи */
-.gallery {
-	text-align: center; /* Центрирование контента галереи */
-	padding: 20px; /* Отступ внутри галереи */
+.instagram-link a:hover {
+	color: #0073e6; /* Цвет при наведении */
+	text-decoration: underline; /* Подчеркивание при наведении */
 }
 
-.gallery h1 {
-	font-size: 2.5em; 
-	margin-bottom: 30px; 
-	color: #333; 
+/*Темная тема для слайдера*/
+body.dark-theme.slider-container {
+	background-color: #121212;
+	color: #ffffff;
 }
 
-.gallery-grid {
-	display: grid; /* Используем сетку для расположения элементов */
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Колонки с минимальной шириной 300px */
-	gap: 30px; /* Расстояние между элементами сетки */
-	padding: 0 20px; 
-}
 
-.gallery-item {
-	background-color: #fff; 
-	border-radius: 15px; 
-	overflow: hidden; /* Прячем содержимое за границами блока */
-}
-
-.gallery-item img {
-	width: 100%; /* Изображение занимает всю ширину карточки */
-	height: 300px; /* Фиксированная высота изображения */
-	object-fit: cover; /* Изображение обрезается, чтобы заполнить блок */
-}
-/* Стили для футера */
+/* Подвал */
 .footer {
-	background-color: #000; /* Черный фон для футера */
-	color: #fff; /* Белый текст */
-	text-align: center; /* Центрируем содержимое по умолчанию */
-	padding: 20px 0; /* Отступы сверху и снизу */
-	font-size: 1.2em; /* Размер шрифта */
-	position: relative; /* Позиционирование футера */
-	bottom: 0; /* Устанавливаем футер внизу */
-	width: 100%; /* Футер на всю ширину */
-}
- /* Адаптивные стили */
- @media (max-width: 768px) {
-	.service__item {
-		 width: calc(50% - 20px); /* Два элемента в строке на мобильных устройствах */
-	}
-}
-
-@media (max-width: 480px) {
-	.service__item {
-		 width: 100%; /* Один элемент в строке на очень маленьких экранах */
-	}
-}
- /* Стили для подвала */
- .footer {
-	background-color: rgba(214,225,229, 0.8); /*  фон */
-	color: #000000; /* текст */
-	padding: 20px 0; /* Отступы сверху и снизу */
-	text-align: center;
+    background-color: rgba(214,225,229, 0.8);
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .footer__content {
-	display: flex;
-	justify-content: space-between; /* Размещение блоков слева и справа */
-	align-items: center;
-	max-width: 1200px;
-	margin: 0 auto; /* Центрирование подвала */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer__left {
-	display: flex;
-	justify-content: space-between;
-	gap: 15px; /* Отступы между изображениями */
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .footer__link {
-	display: inline-block;
-	text-decoration: none; /* Убираем подчеркивание */
+    display: inline-block;
+    text-decoration: none;
 }
 
 .footer__image {
-	width: 50px; /* Ширина изображений */
-	height: 50px; /* Высота изображений */
-	object-fit: cover; /* Сохранение пропорций изображений */
-	border-radius: 5px; /* Скругление углов */
-	transition: transform 0.3s ease; /* Плавный переход при наведении */
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 .footer__image:hover {
-	transform: scale(1.1); /* Увеличение изображения при наведении */
+    transform: scale(1.1);
 }
 
 .footer__right {
-	font-size: 18px; /* Размер шрифта для текста */
-	font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
 }
 
+/* Адаптивные стили */
 @media (max-width: 768px) {
-	.footer__content {
-		 flex-direction: column; /* Вертикальное расположение элементов на мобильных устройствах */
-		 align-items: center;
-	}
+    /* Навигация */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
 
-	.footer__left {
-		 margin-bottom: 15px;
-	}
+    .navbar img {
+        margin-right: 0;
+        max-width: 180px;
+        margin-bottom: 20px;
+    }
 
-	.footer__image {
-		 width: 40px;
-		 height: 40px;
-	}
+    .nav-list {
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
 }
- /* Тёмная тема: общий стиль */
+
+
+/* Тёмная тема */
 body.dark-theme {
-	background-color: #121212;
-	color: #ffffff;
- }
- /*Кнопка для переключения темы*/
- .theme-toggle-btn {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	padding: 10px 20px;
-	font-size: 16px;
-	background-color: #007bff;
-	color: #ffffff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
- }
- 
- .theme-toggle-btn:hover {
-	background-color: #0056b3;
- }
- 
- /* Тёмная тема для заголовков */
- body.dark-theme h1, 
- body.dark-theme h2, 
- body.dark-theme h3 {
-	color: #ffffff;
- }
- 
- /* Тёмная тема для навигации */
- body.dark-theme .navbar {
-	background-color: rgba(50, 50, 50, 0.8);
- }
- 
- body.dark-theme .nav-list a {
-	color: #ffffff; /* Ссылки в меню */
- }
- 
- /* Тёмная тема для первого блока */
- body.dark-theme .advertisement {
-	background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg);
-	color: #f4f4f4; /* Белый текст */
- }
- 
- body.dark-theme .advertisement::before {
-	background: rgba(0, 0, 0, 0.7); /* Более тёмный слой */
- }
- 
- /* Тёмная тема для услуг */
- body.dark-theme .services {
-	background-color: #1a1a1a;
- }
- 
- body.dark-theme .service__item {
-	background-color: rgba(255, 255, 255, 0.1); /* Тёмный фон */
-	color: #ffffff; /* Белый текст */
- }
- 
- body.dark-theme .service__item:hover {
-	transform: translateY(-10px);
- }
- 
- body.dark-theme .service__price {
-	color: #ffd700; /* Золотой цвет цены */
- }
- 
- body.dark-theme .service__item:hover .service__price {
-	color: #ff9900; /* Оранжевый при наведении */
- }
- 
- /* Тёмная тема для подвала */
- body.dark-theme .footer {
-	background-color: rgba(40, 40, 40, 0.8);
-	color: #ffffff;
- }
- 
- body.dark-theme .footer__image {
-	filter: brightness(0.8); /* Затемнение изображений */
- }
- 
- body.dark-theme .footer__image:hover {
-	filter: brightness(1); /* Увеличение яркости при наведении */
- }
-
-/*Для увел. карточек*/
-.modal {
-	display: none; /* Скрываем модальное окно по умолчанию */
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
-	justify-content: center;
-	align-items: center;
-	z-index: 1000; /* Помещаем модальное окно поверх других элементов */
+    background-color: #121212;
+    color: #ffffff;
 }
 
-/* Стиль для изображения в модальном окне */
-.modal-content {
-	max-width: 90%;
-	max-height: 90%;
+
+/* Тёмная тема для заголовков */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3 {
+    color: #ffffff;
 }
 
-.gallery-img {
-	width: 100%; /* Все изображения по умолчанию адаптивные */
-	cursor: pointer; /* Указатель при наведении на изображения */
-	transition: transform 0.3s ease; /* Плавный эффект при увеличении */
+/* Тёмная тема для навигации */
+body.dark-theme .navbar {
+    background-color: rgba(50, 50, 50, 0.8);
 }
 
-/* Эффект увеличения при наведении */
-.gallery-img:hover {
-	transform: scale(1.05);
+body.dark-theme .nav-list a {
+    color: #ffffff; /* Ссылки в меню */
 }
+
+
+/* Тёмная тема для подвала */
+body.dark-theme .footer {
+    background-color: rgba(40, 40, 40, 0.8);
+    color: #ffffff;
+}
+
+body.dark-theme .footer__image {
+    filter: brightness(0.8); /* Затемнение изображений */
+}
+
+body.dark-theme .footer__image:hover {
+    filter: brightness(1); /* Увеличение яркости при наведении */
+}
+
