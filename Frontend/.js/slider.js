@@ -1,42 +1,28 @@
-let currentIndex = 0; // Индекс текущего изображения
+// JavaScript для слайдера
+const sliderWrapper = document.querySelector('.slider-wrapper');
 const slides = document.querySelectorAll('.slide');
-const prevButton = document.querySelector('.slider-btn.prev');
-const nextButton = document.querySelector('.slider-btn.next');
+const prevBtn = document.querySelector('.slider-btn.prev');
+const nextBtn = document.querySelector('.slider-btn.next');
 
-function updateButtons() {
-    // Скрыть левую кнопку, если это первый слайд
-    if (currentIndex === 0) {
-        prevButton.style.display = 'none';
-    } else {
-        prevButton.style.display = 'block';
-    }
-    
-    // Скрыть правую кнопку, если это последний слайд
-    if (currentIndex === slides.length - 1) {
-        nextButton.style.display = 'none';
-    } else {
-        nextButton.style.display = 'block';
-    }
+let currentIndex = 0;
+
+// Функция для перемещения слайдов
+function updateSlider() {
+	 const slideWidth = slides[0].clientWidth;
+	 sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
-function nextSlide() {
-    if (currentIndex < slides.length - 1) {
-        currentIndex++;
-        document.querySelector('.slider-wrapper').style.transform = `translateX(-${currentIndex * 390}px)`;
-    }
-    updateButtons(); // Обновить видимость кнопок
-}
+// Событие для кнопки "вперед"
+nextBtn.addEventListener('click', () => {
+	 currentIndex = (currentIndex + 1) % slides.length; // Цикличность
+	 updateSlider();
+});
 
-function prevSlide() {
-    if (currentIndex > 0) {
-        currentIndex--;
-        document.querySelector('.slider-wrapper').style.transform = `translateX(-${currentIndex * 390}px)`;
-    }
-    updateButtons(); // Обновить видимость кнопок
-}
+// Событие для кнопки "назад"
+prevBtn.addEventListener('click', () => {
+	 currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Цикличность
+	 updateSlider();
+});
 
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
-
-// Инициализация кнопок на старте
-updateButtons();
+// Обновление размера при изменении окна
+window.addEventListener('resize', updateSlider);

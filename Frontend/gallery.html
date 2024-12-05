@@ -7,72 +7,44 @@
     <link rel="stylesheet" href="css/gallery.css">
 </head>
 <header>
-    <div class="navbar">
-        <div>
-            <img src=".img/Лого.jpg" alt="Барбершоп Лого">
-        </div>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Цены</a></li>
-                <li><a href="masters.html">Мастера</a></li>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
-    </div>
+	<div class="navbar">
+		<div>
+			<img src=".img/Лого.jpg"> 
+		</div>
+		<nav>
+			<ul class="nav-list"> 
+				<li><a href="about.html">О нас</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Цены</a></li>
+				<li><a href="masters.html">Мастера</a></li>
+				<li><a href="gallery.html">Галерея</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+	  <button id="theme-toggle" class="theme-toggle-btn">Переключить тему</button>
+	 </div>
 </header>
 
 <body>
-	<div class="slider-container">
-		<div class="slider-text">
-			<h2>РАБОТЫ НАШЕГО БАРБЕРШОПА</h2>
-		</div>
-		<div class="slider-wrapper">
-			 <img src=".img\Галерея_1.jpg" class="slide">
-			 <img src=".img\Галерея_2.jpg" class="slide">
-			 <img src=".img\Галерея_3.jpg" class="slide">
-			 <img src=".img\Галерея_4.jpeg" class="slide">
-			 <img src=".img\Галерея_5.jpeg" class="slide">
-			 <img src=".img\Галерея_6.jpeg" class="slide">
-			 <img src=".img\Галерея_7.jpg"  class="slide">
-			 <img src=".img\Галерея_8.jpeg" class="slide">
-			 <img src=".img\Галерея_9.jpeg" class="slide">
-		</div>
-		    <div>
-		       <button class="slider-btn prev">❮</button>
-		       <button class="slider-btn next">❯</button>
-	       </div>
-	       <div class="instagram-link">
-		       <p><a href="https://www.instagram.com/nikitagosteev?igsh=YmZveG52ODB0YzEw" target="_blank">Больше работ в нашем Instagram >> </a></p>
-          </div>
-	   <script src=".js/slider.js"></script>
+<div class="slider-container">
+	<div class="gallery-text">
+		<h2>Работы нашего барбершопа</h2>
+  </div>
+	<div class="slider-wrapper">
+		 <div class="slide"><img src=".img/Галерея_1.jpg" alt="Работа 1"></div>
+		 <div class="slide"><img src=".img/Галерея_2.jpg" alt="Работа 2"></div>
+		 <div class="slide"><img src=".img/Галерея_3.jpg" alt="Работа 3"></div>
+		 <div class="slide"><img src=".img/Галерея_4.jpeg" alt="Работа 4"></div>
+		 <div class="slide"><img src=".img/Галерея_5.jpeg" alt="Работа 5"></div>
+		 <div class="slide"><img src=".img/Галерея_6.jpeg" alt="Работа 6"></div>
+		 <div class="slide"><img src=".img/Галерея_7.jpg" alt="Работа 7"></div>
+		 <div class="slide"><img src=".img/Галерея_8.jpeg" alt="Работа 8"></div>
+		 <div class="slide"><img src=".img/Галерея_9.jpeg" alt="Работа 9"></div>
 	</div>
+	<button class="slider-btn prev">❮</button>
+	<button class="slider-btn next">❯</button>
+</div>
 </body>
+<script src=".js/slider.js"></script>
 
-<footer class="footer">
-	<div class="container">
-	  <div class="footer__content">
-		 <!-- Левый блок с изображениями-ссылками -->
-		 <div class="footer__left">
-			<a href="https://www.instagram.com/nikitagosteev?igsh=YmZveG52ODB0YzEw" target="_blank" class="footer__link">
-			  <img src=".img/inst.jpg" alt="Image 1" class="footer__image">
-			</a>
-			<a href="https://vk.com/lemoonier" target="_blank" class="footer__link">
-			  <img src=".img/vk.jpg" alt="Image 2" class="footer__image">
-			</a>
-			<a href="https://www.viber.com/ru/download/" target="_blank" class="footer__link">
-			  <img src=".img/viber.jpg" alt="Image 3" class="footer__image">
-			</a>
-		 </div>
- 
-		 <!-- Правый блок с текстом 2024 -->
-		 <div class="footer__right">
-			<p>&copy; 2024</p>
-		 </div>
-	  </div>
-	</div>
- </footer>
- <script src=".js/script.js"></script>
 </html>

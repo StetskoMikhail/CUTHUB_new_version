@@ -1,361 +1,420 @@
 /* Основные стили */
 header {
-    margin: 0; /* Убираем отступы по умолчанию у body */
-    background-repeat: no-repeat; /* Отключаем повтор фона */
-    background-size: cover; /* Устанавливаем фоновое изображение на весь размер блока */
-    background-attachment: fixed; /* Фон фиксирован относительно окна */
-    font-family: Arial, sans-serif; /* Задаем шрифт для заголовка */
+	margin: 0; /* Убираем отступы по умолчанию у body */
+	background-repeat: no-repeat; /* Отключаем повтор фона */
+	background-size: cover; /* Устанавливаем фоновое изображение на весь размер блока */
+	background-attachment: fixed; /* Фон фиксирован относительно окна */
+	font-family: Arial, sans-serif; /* Задаем шрифт для заголовка */
 }
 
 body {
-    font-family: Arial, sans-serif; /* Шрифт для всего тела */
-    background-color: #f4f4f4; /* Цвет фона для всего документа */
-    margin: 0; /* Убираем отступы у body */
-    padding: 0; /* Убираем паддинг у body */
+	font-family: Arial, sans-serif; /* Шрифт для всего тела */
+	background-color: #f4f4f4; /* Цвет фона для всего документа */
+	margin: 0; /* Убираем отступы у body */
+	padding: 0; /* Убираем паддинг у body */
 }
 
+/* Навигация */
 .navbar {
-    display: flex; /* Используем flexbox для навигации */
-    align-items: center; /* Выравниваем элементы по вертикали */
-    background-color: rgba(214,225,229, 0.8); /* Полупрозрачный фон */
-    height: 120px; /* Высота навигационной панели */
-    justify-content: center; /* Центрируем содержимое по горизонтали */
+	display: flex;
+	align-items: center;
+	background-color: rgba(214, 225, 229, 0.8); /* Полупрозрачный фон */
+	height: 120px;
+	justify-content: space-between; /* Лого слева, навигация справа */
+	padding: 0 200px;
+	flex-wrap: nowrap; /* Предотвращаем оборачивание по умолчанию */
 }
 
 .navbar img {
-    max-width: 220px; /* Ограничиваем максимальную ширину изображения */
-    height: 100px; /* Устанавливаем фиксированную высоту для логотипа */
-    margin-right: 300px; /* Отступ справа, чтобы логотип сдвигался влево */
+	max-width: 220px;
+	height: 120px; /* Автоматическая высота для сохранения пропорций */
+	margin-right: 20px; /* Отступ от меню */
 }
 
 .nav-list {
-    list-style: none; /* Убираем маркеры у списка */
-    padding: 0; /* Убираем отступы у списка */
-    display: flex; /* Используем flexbox для горизонтального расположения */
-    font-size: 18px; /* Размер шрифта для ссылок */
+	list-style: none;
+	display: flex;
+	font-size: 20px;
+	margin: 0; /* Убираем дефолтные отступы */
+	padding: 0;
+	gap: 30px; /* Расстояние между элементами меню */
 }
 
 .nav-list li {
-    margin-left: 20px; /* Отступы между пунктами меню */
+	display: inline-block;
 }
 
 .nav-list a {
-    color: rgb(0, 0, 0); /* Цвет текста ссылок */
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
+	text-decoration: none;
+	color: #000;
+	transition: color 0.3s;
+}
+
+.nav-list a:hover {
+	color: #555;
 }
 
 /* Блок "О нас" */
 .about-us {
-    padding: 20px; /* Отступы внутри блока */
-    background-color: #f5f5f5; /* Цвет фона для блока "О нас" */
-    font-family: Arial, sans-serif; /* Шрифт для текста блока */
-    line-height: 1.6; /* Высота строки для удобочитаемости */
-    text-align: center; /* Выравнивание текста по центру */
+	background-color: #000; /* Чёрный фон для секции */
+	padding: 20px; /* Отступы внутри блока */
+	font-family: Arial, sans-serif; /* Шрифт для текста блока */
+	line-height: 1.6; /* Высота строки для удобочитаемости */
+	text-align: center; /* Выравнивание текста по центру */
 }
 
 .about-us h1 {
-    font-size: 2.5em; /* Увеличиваем размер шрифта заголовка */
-    color: #333; /* Цвет заголовка */
-    margin-bottom: 20px; /* Отступ снизу */
-    text-align: center; /* Выравнивание заголовка по центру */
+	font-size: 2.5em; /* Увеличиваем размер шрифта заголовка */
+	color: #ffffff; /* Цвет заголовка */
+	margin-bottom: 20px; /* Отступ снизу */
 }
 
 .about-us p {
-    font-size: 1.2em; /* Размер шрифта для абзацев */
-    color: #555; /* Цвет текста абзацев */
-    margin-bottom: 15px; /* Отступ снизу для абзацев */
-    text-align: left; /* Выравнивание текста по левому краю */
-    padding: 0 10px; /* Отступы слева и справа для текста абзацев */
+	font-size: 1.2em; /* Размер шрифта для абзацев */
+	color: #ffffff; /* Цвет текста абзацев */
+	margin-bottom: 15px; /* Отступ снизу для абзацев */
+	text-align: left; /* Выравнивание текста по левому краю */
+	padding: 0 10px; /* Отступы слева и справа для текста абзацев */
 }
 
 /* Новости и акции */
 .news-and-promotions h2 {
-    font-size: 2.5em; /* Размер шрифта заголовка для блока новостей */
-    color: #333; /* Цвет заголовка */
-    margin-bottom: 20px; /* Отступ снизу */
-    text-align: center; /* Выравнивание по центру */
+	font-size: 2.5em; /* Размер шрифта заголовка для блока новостей */
+	color: #333; /* Цвет заголовка */
+	margin-bottom: 20px; /* Отступ снизу */
+	text-align: center; /* Выравнивание по центру */
 }
 
 .news-container {
-    display: flex; /* Используем flexbox для карточек новостей */
-    flex-wrap: wrap; /* Разрешаем перенос карточек на новые строки */
-    gap: 20px; /* Отступы между карточками */
-    justify-content: center; /* Центрируем карточки по горизонтали */
-    padding: 20px; /* Отступы внутри контейнера */
-    background-color: #1e1e1e; /* Темный фон для контейнера */
+	display: flex; /* Используем flexbox для карточек новостей */
+	flex-wrap: wrap; /* Разрешаем перенос карточек на новые строки */
+	gap: 20px; /* Отступы между карточками */
+	justify-content: center; /* Центрируем карточки по горизонтали */
+	padding: 20px; /* Отступы внутри контейнера */
+	background-color: #1e1e1e; /* Темный фон для контейнера */
 }
 
 .news-item {
-    background-color: #2a2a2a; /* Цвет фона для каждой карточки */
-    color: #fff; /* Цвет текста */
-    width: 300px; /* Фиксированная ширина карточки */
-    border-radius: 10px; /* Скругленные углы карточки */
-    overflow: hidden; /* Скрываем элементы, выходящие за пределы карточки */
-    text-align: center; /* Выравнивание текста по центру */
-    padding: 20px; /* Внутренние отступы */
+	background-color: #2a2a2a; /* Цвет фона для каждой карточки */
+	color: #fff; /* Цвет текста */
+	width: 300px; /* Фиксированная ширина карточки */
+	border-radius: 10px; /* Скругленные углы карточки */
+	overflow: hidden; /* Скрываем элементы, выходящие за пределы карточки */
+	text-align: center; /* Выравнивание текста по центру */
+	padding: 20px; /* Внутренние отступы */
 }
 
 .news-item img {
-    width: 100%; /* Ширина изображения 100% от ширины карточки */
-    height: 200px; /* Высота изображения */
-    object-fit: cover; /* Сохраняем пропорции изображения */
+	width: 100%; /* Ширина изображения 100% от ширины карточки */
+	height: 200px; /* Высота изображения */
+	object-fit: cover; /* Сохраняем пропорции изображения */
 }
 
 .news-item h3 {
-    color: #ff8c42; /* Цвет заголовка новости */
-    font-size: 1.2em; /* Размер шрифта для заголовка новости */
-    margin: 10px 0; /* Отступы сверху и снизу */
+	color: #ff8c42; /* Цвет заголовка новости */
+	font-size: 1.2em; /* Размер шрифта для заголовка новости */
+	margin: 10px 0; /* Отступы сверху и снизу */
 }
 
 .news-item h4 {
-    margin: 10px 0; /* Отступы сверху и снизу */
-    font-size: 1.1em; /* Размер шрифта для подзаголовка */
+	margin: 10px 0; /* Отступы сверху и снизу */
+	font-size: 1.1em; /* Размер шрифта для подзаголовка */
 }
-
 .news-item p {
-    font-size: 0.9em; /* Размер шрифта для текста */
-    padding: 0 10px 15px; /* Отступы для текста */
+	font-size: 0.9em; /* Размер шрифта для текста */
+	padding: 0 10px 15px; /* Отступы для текста */
 }
 
 /* Стилизация кнопки "Подробнее" */
 .news-item button.details-btn {
-    display: inline-block; /* Отображаем кнопку как инлайн-блок */
-    background: linear-gradient(135deg, #ff8c42, #f68b2e); /* Градиентный фон */
-    color: #fff; /* Белый цвет текста */
-    border: none; /* Без рамки */
-    border-radius: 25px; /* Скругленные углы */
-    padding: 10px 20px; /* Внутренние отступы */
-    font-weight: bold; /* Жирный шрифт */
-    font-size: 1em; /* Размер шрифта */
-    cursor: pointer; /* Курсор в виде указателя */
-    transition: all 0.3s ease; /* Плавный переход для эффектов */
-    margin-bottom: 10px; /* Отступ снизу */
+	display: inline-block; /* Отображаем кнопку как инлайн-блок */
+	background: linear-gradient(135deg, #ff8c42, #f68b2e); /* Градиентный фон */
+	color: #fff; /* Белый цвет текста */
+	border: none; /* Без рамки */
+	border-radius: 25px; /* Скругленные углы */
+	padding: 10px 20px; /* Внутренние отступы */
+	font-weight: bold; /* Жирный шрифт */
+	font-size: 1em; /* Размер шрифта */
+	cursor: pointer; /* Курсор в виде указателя */
+	transition: all 0.3s ease; /* Плавный переход для эффектов */
+	margin-bottom: 10px; /* Отступ снизу */
 }
 
 .news-item button.details-btn:hover {
-    background: linear-gradient(135deg, #f68b2e, #ff8c42); /* Изменение фона при наведении */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+	background: linear-gradient(135deg, #f68b2e, #ff8c42); /* Изменение фона при наведении */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
 }
 
 /* Стили для футера */
 .footer {
-    background-color: #000; /* Черный фон для футера */
-    color: #fff; /* Белый цвет текста */
-    text-align: center; /* Центрируем текст футера */
-    padding: 20px 0; /* Отступы сверху и снизу */
-    font-size: 1.2em; /* Размер шрифта */
-    position: relative; /* Позиционирование футера */
-    bottom: 0; /* Футер фиксируется внизу */
-    width: 100%; /* Ширина футера */
+	background-color: rgba(214, 225, 229, 0.8); /* Полупрозрачный фон */
+	color: #000000; /* Черный цвет текста */
+	padding: 20px 0; /* Отступы внутри футера */
+	text-align: center; /* Центрируем текст */
 }
 
-/* Адаптивные стили для экранов с шириной до 768px */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Меняем ориентацию на вертикальную */
-        align-items: center; /* Центрируем элементы */
-        height: auto; /* Высота автоматически подстраивается */
-    }
-
-    .navbar img {
-        margin-right: 0; /* Убираем отступ справа */
-        max-width: 180px; /* Ограничиваем ширину логотипа */
-        margin-bottom: 20px; /* Добавляем отступ снизу */
-    }
-
-    .nav-list {
-        flex-direction: column; /* Вертикальное расположение ссылок */
-        margin-top: 10px; /* Отступ сверху */
-        align-items: center; /* Центрируем ссылки */
-    }
-
-    .nav-list li {
-        margin-left: 0; /* Убираем отступ слева */
-        margin-bottom: 15px; /* Добавляем отступ снизу */
-    }
-
-    .about-us h1 {
-        font-size: 2em; /* Уменьшаем размер заголовка */
-    }
-
-    .news-container {
-        flex-direction: column; /* Вертикальное расположение карточек */
-        gap: 15px; /* Уменьшаем отступы между карточками */
-    }
-
-    .news-item {
-        width: 100%; /* Карточки на всю ширину */
-    }
-
-    .footer__content {
-        flex-direction: column; /* Вертикальное расположение элементов футера */
-        align-items: center; /* Центрируем элементы */
-    }
-
-    .footer__image {
-        width: 40px; /* Уменьшаем размер изображений в футере */
-        height: 40px; /* Уменьшаем высоту изображений */
-    }
+.footer__content {
+	display: flex; /* Используем flexbox для футера */
+	justify-content: space-between; /* Равномерное распределение элементов */
+	align-items: center; /* Вертикальное выравнивание */
+	max-width: 1200px; /* Ограничиваем максимальную ширину */
+	margin: 0 auto; /* Центрируем футер */
 }
 
-/* Адаптивные стили для экранов с шириной до 480px */
-@media (max-width: 480px) {
-    .navbar img {
-        max-width: 150px; /* Еще меньше размер логотипа */
-    }
+.footer__left {
+	display: flex; /* Используем flexbox для левой части футера */
+	justify-content: space-between; /* Равномерное распределение элементов */
+	gap: 15px; /* Отступы между элементами */
+}
 
-    .about-us h1 {
-        font-size: 1.5em; /* Еще меньше размер заголовка */
-    }
+.footer__link {
+	display: inline-block; /* Отображение ссылок */
+	text-decoration: none; /* Убираем подчеркивание */
+}
 
-    .news-container {
-        flex-direction: column; /* Вертикальное расположение карточек */
-        gap: 20px; /* Увеличиваем отступы между карточками */
-    }
+.footer__image {
+	width: 50px; /* Размер изображений */
+	height: 50px; /* Высота изображений */
+	object-fit: cover; /* Сохранение пропорций изображений */
+	border-radius: 5px; /* Скругляем углы изображений */
+	transition: transform 0.3s ease; /* Плавный переход при наведении */
+}
 
-    .news-item {
-        width: 100%; /* Карточки на всю ширину */
-    }
+.footer__image:hover {
+	transform: scale(1.1); /* Увеличение изображения при наведении */
+}
 
-    .footer__image {
-        width: 30px; /* Уменьшаем размер изображений в футере */
-        height: 30px; /* Уменьшаем высоту изображений */
-    }
+.footer__right {
+	font-size: 18px; /* Размер шрифта для правой части футера */
+	font-weight: bold; /* Жирный шрифт */
 }
 
 /* Тёмная тема: общий стиль */
 body.dark-theme {
-    background-color: #121212; /* Темный фон для всего тела */
-    color: #ffffff; /* Белый цвет текста */
+	background-color: #121212; /* Темный фон для всего тела */
+	color: #ffffff; /* Белый цвет текста */
 }
 
-/* Кнопка переключения темы */
-.theme-toggle-btn {
-    position: fixed; /* Фиксированное положение */
-    bottom: 30px; /* Располагаем кнопку внизу */
-    right: 30px; /* Сдвигаем кнопку вправо */
-    background-color: #f39c12; /* Оранжевый фон */
-    color: white; /* Белый цвет текста */
-    border: none; /* Без рамки */
-    border-radius: 50%; /* Круглая форма кнопки */
-    font-size: 18px; /* Размер шрифта */
-    padding: 15px; /* Внутренние отступы */
-    cursor: pointer; /* Курсор в виде указателя */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+body.dark-theme .navbar {
+	background-color: rgba(0, 0, 0, 0.8); /* Тёмный фон для навигационной панели */
 }
 
-.theme-toggle-btn:hover {
-    background-color: #e67e22; /* Темнее фон при наведении */
-    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+body.dark-theme .news-container {
+	background-color: #333; /* Тёмный фон для контейнера новостей */
 }
 
-.theme-toggle-btn:focus {
-    outline: none; /* Убираем рамку при фокусе */
+body.dark-theme .footer {
+	background-color: rgba(0, 0, 0, 0.8); /* Тёмный фон для футера */
 }
 
-/* Подвал */
+/* Плавный переход для темной темы */
+body, .navbar, .news-container, .footer {
+	transition: all 0.3s ease; /* Плавный переход для всех элементов */
+}
+/* Основные стили */
+header {
+	margin: 0; /* Убираем отступы по умолчанию у body */
+	background-repeat: no-repeat; /* Отключаем повтор фона */
+	background-size: cover; /* Устанавливаем фоновое изображение на весь размер блока */
+	background-attachment: fixed; /* Фон фиксирован относительно окна */
+	font-family: Arial, sans-serif; /* Задаем шрифт для заголовка */
+}
+
+body {
+	font-family: Arial, sans-serif; /* Шрифт для всего тела */
+	background-color: #f4f4f4; /* Цвет фона для всего документа */
+	margin: 0; /* Убираем отступы у body */
+	padding: 0; /* Убираем паддинг у body */
+}
+
+/* Навигация */
+.navbar {
+	display: flex; /* Используем flexbox для навигации */
+	align-items: center; /* Выравниваем элементы по вертикали */
+	background-color: rgba(214, 225, 229, 0.8); /* Полупрозрачный фон */
+	height: 120px; /* Высота навигационной панели */
+	justify-content: center; /* Центрируем содержимое по горизонтали */
+}
+
+.navbar img {
+	max-width: 220px; /* Ограничиваем максимальную ширину изображения */
+	height: 100px; /* Устанавливаем фиксированную высоту для логотипа */
+	margin-right: 300px; /* Отступ справа, чтобы логотип сдвигался влево */
+}
+
+.nav-list {
+	list-style: none; /* Убираем маркеры у списка */
+	padding: 0; /* Убираем отступы у списка */
+	display: flex; /* Используем flexbox для горизонтального расположения */
+	font-size: 18px; /* Размер шрифта для ссылок */
+}
+
+.nav-list li {
+	margin-left: 20px; /* Отступы между пунктами меню */
+}
+
+.nav-list a {
+	color: rgb(0, 0, 0); /* Цвет текста ссылок */
+	text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+/* Блок "О нас" */
+.about-us {
+	background-color: #000; /* Чёрный фон для секции */
+	padding: 20px; /* Отступы внутри блока */
+	font-family: Arial, sans-serif; /* Шрифт для текста блока */
+	line-height: 1.6; /* Высота строки для удобочитаемости */
+	text-align: center; /* Выравнивание текста по центру */
+}
+
+.about-us h1 {
+	font-size: 2.5em; /* Увеличиваем размер шрифта заголовка */
+	color: #ffffff; /* Цвет заголовка */
+	margin-bottom: 20px; /* Отступ снизу */
+}
+
+.about-us p {
+	font-size: 1.2em; /* Размер шрифта для абзацев */
+	color: #ffffff; /* Цвет текста абзацев */
+	margin-bottom: 15px; /* Отступ снизу для абзацев */
+	text-align: left; /* Выравнивание текста по левому краю */
+	padding: 0 10px; /* Отступы слева и справа для текста абзацев */
+}
+/**/
+.theme-toggle-btn{
+	position:absolute;
+}
+/* Новости и акции */
+.news-and-promotions h2 {
+	font-size: 2.5em; /* Размер шрифта заголовка для блока новостей */
+	color: #333; /* Цвет заголовка */
+	margin-bottom: 20px; /* Отступ снизу */
+	text-align: center; /* Выравнивание по центру */
+}
+
+.news-container {
+	display: flex; /* Используем flexbox для карточек новостей */
+	flex-wrap: wrap; /* Разрешаем перенос карточек на новые строки */
+	gap: 20px; /* Отступы между карточками */
+	justify-content: center; /* Центрируем карточки по горизонтали */
+	padding: 20px; /* Отступы внутри контейнера */
+	background-color: #1e1e1e; /* Темный фон для контейнера */
+}
+
+.news-item {
+	background-color: #2a2a2a; /* Цвет фона для каждой карточки */
+	color: #fff; /* Цвет текста */
+	width: 300px; /* Фиксированная ширина карточки */
+	border-radius: 10px; /* Скругленные углы карточки */
+	overflow: hidden; /* Скрываем элементы, выходящие за пределы карточки */
+	text-align: center; /* Выравнивание текста по центру */
+	padding: 20px; /* Внутренние отступы */
+}
+
+.news-item img {
+	width: 100%; /* Ширина изображения 100% от ширины карточки */
+	height: 200px; /* Высота изображения */
+	object-fit: cover; /* Сохраняем пропорции изображения */
+}
+
+.news-item h3 {
+	color: #ff8c42; /* Цвет заголовка новости */
+	font-size: 1.2em; /* Размер шрифта для заголовка новости */
+	margin: 10px 0; /* Отступы сверху и снизу */
+}
+
+.news-item h4 {
+	margin: 10px 0; /* Отступы сверху и снизу */
+	font-size: 1.1em; /* Размер шрифта для подзаголовка */
+}
+.news-item p {
+	font-size: 0.9em; /* Размер шрифта для текста */
+	padding: 0 10px 15px; /* Отступы для текста */
+}
+
+/* Стилизация кнопки "Подробнее" */
+.news-item button.details-btn {
+	display: inline-block; /* Отображаем кнопку как инлайн-блок */
+	background: linear-gradient(135deg, #ff8c42, #f68b2e); /* Градиентный фон */
+	color: #fff; /* Белый цвет текста */
+	border: none; /* Без рамки */
+	border-radius: 25px; /* Скругленные углы */
+	padding: 10px 20px; /* Внутренние отступы */
+	font-weight: bold; /* Жирный шрифт */
+	font-size: 1em; /* Размер шрифта */
+	cursor: pointer; /* Курсор в виде указателя */
+	transition: all 0.3s ease; /* Плавный переход для эффектов */
+	margin-bottom: 10px; /* Отступ снизу */
+}
+
+.news-item button.details-btn:hover {
+	background: linear-gradient(135deg, #f68b2e, #ff8c42); /* Изменение фона при наведении */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
+
+/* Стили для футера */
 .footer {
-    background-color: rgba(214,225,229, 0.8); /* Полупрозрачный фон */
-    color: #000000; /* Черный цвет текста */
-    padding: 20px 0; /* Отступы внутри футера */
-    text-align: center; /* Центрируем текст */
+	background-color: rgba(214, 225, 229, 0.8); /* Полупрозрачный фон */
+	color: #000000; /* Черный цвет текста */
+	padding: 20px 0; /* Отступы внутри футера */
+	text-align: center; /* Центрируем текст */
 }
 
 .footer__content {
-    display: flex; /* Используем flexbox для футера */
-    justify-content: space-between; /* Равномерное распределение элементов */
-    align-items: center; /* Вертикальное выравнивание */
-    max-width: 1200px; /* Ограничиваем максимальную ширину */
-    margin: 0 auto; /* Центрируем футер */
+	display: flex; /* Используем flexbox для футера */
+	justify-content: space-between; /* Равномерное распределение элементов */
+	align-items: center; /* Вертикальное выравнивание */
+	max-width: 1200px; /* Ограничиваем максимальную ширину */
+	margin: 0 auto; /* Центрируем футер */
 }
 
 .footer__left {
-    display: flex; /* Используем flexbox для левой части футера */
-    justify-content: space-between; /* Равномерное распределение элементов */
-    gap: 15px; /* Отступы между элементами */
+	display: flex; /* Используем flexbox для левой части футера */
+	justify-content: space-between; /* Равномерное распределение элементов */
+	gap: 15px; /* Отступы между элементами */
 }
 
 .footer__link {
-    display: inline-block; /* Отображение ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
+	display: inline-block; /* Отображение ссылок */
+	text-decoration: none; /* Убираем подчеркивание */
 }
 
 .footer__image {
-    width: 50px; /* Размер изображений */
-    height: 50px; /* Высота изображений */
-    object-fit: cover; /* Сохранение пропорций изображений */
-    border-radius: 5px; /* Скругляем углы изображений */
-    transition: transform 0.3s ease; /* Плавный переход при наведении */
+	width: 50px; /* Размер изображений */
+	height: 50px; /* Высота изображений */
+	object-fit: cover; /* Сохранение пропорций изображений */
+	border-radius: 5px; /* Скругляем углы изображений */
+	transition: transform 0.3s ease; /* Плавный переход при наведении */
 }
 
 .footer__image:hover {
-    transform: scale(1.1); /* Увеличение изображения при наведении */
+	transform: scale(1.1); /* Увеличение изображения при наведении */
 }
 
 .footer__right {
-    font-size: 18px; /* Размер шрифта для правой части футера */
-    font-weight: bold; /* Жирный шрифт */
+	font-size: 18px; /* Размер шрифта для правой части футера */
+	font-weight: bold; /* Жирный шрифт */
 }
 
-/* Тёмная тема для заголовков */
-body.dark-theme h1,
-body.dark-theme h2,
-body.dark-theme h3 {
-    color: #ffffff; /* Белый цвет для заголовков */
+/* Тёмная тема: общий стиль */
+body.dark-theme {
+	background-color: #121212; /* Темный фон для всего тела */
+	color: #ffffff; /* Белый цвет текста */
 }
 
-/* Тёмная тема для навигации */
 body.dark-theme .navbar {
-    background-color: rgba(50, 50, 50, 0.8); /* Темный фон для навигации */
+	background-color: rgba(0, 0, 0, 0.8); /* Тёмный фон для навигационной панели */
 }
 
-body.dark-theme .nav-list a {
-    color: #ffffff; /* Белый цвет ссылок */
+body.dark-theme .news-container {
+	background-color: #333; /* Тёмный фон для контейнера новостей */
 }
 
-/* Тёмная тема для первого блока */
-body.dark-theme .advertisement {
-    background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg); /* Изображение для блока */
-    color: #f4f4f4; /* Белый цвет текста */
-}
-
-body.dark-theme .advertisement::before {
-    background: rgba(0, 0, 0, 0.7); /* Темный фон перед изображением */
-}
-
-/* Тёмная тема для услуг */
-body.dark-theme .services {
-    background-color: #1a1a1a; /* Темный фон для блока услуг */
-}
-
-body.dark-theme .service__item {
-    background-color: rgba(255, 255, 255, 0.1); /* Темный фон для карточек */
-    color: #ffffff; /* Белый цвет текста */
-}
-
-body.dark-theme .service__item:hover {
-    transform: translateY(-10px); /* Поднятие карточки при наведении */
-}
-
-body.dark-theme .service__price {
-    color: #ffd700; /* Золотой цвет для цен */
-}
-
-body.dark-theme .service__item:hover .service__price {
-    color: #ff9900; /* Оранжевый цвет для цен при наведении */
-}
-
-/* Тёмная тема для подвала */
 body.dark-theme .footer {
-    background-color: rgba(40, 40, 40, 0.8); /* Темный фон для футера */
-    color: #ffffff; /* Белый цвет текста */
+	background-color: rgba(0, 0, 0, 0.8); /* Тёмный фон для футера */
 }
 
-body.dark-theme .footer__image {
-    filter: brightness(0.8); /* Уменьшаем яркость изображений */
-}
-
-body.dark-theme .footer__image:hover {
-    filter: brightness(1); /* Восстанавливаем яркость при наведении */
+/* Плавный переход для темной темы */
+body, .navbar, .news-container, .footer {
+	transition: all 0.3s ease; /* Плавный переход для всех элементов */
 }
