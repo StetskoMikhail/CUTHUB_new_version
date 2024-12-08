@@ -1,18 +1,17 @@
-/* Основные стили */
+/* Общие стили */
 header {
-    margin: 0; /* Убираем отступы по умолчанию у body */
-    background-repeat: no-repeat; 
-    background-size: cover;    
-    background-attachment: fixed; /* Фон остается на месте при прокрутке страницы */
-    font-family: Arial, sans-serif;
+	margin: 0; /* Убираем отступы по умолчанию */
+	background-repeat: no-repeat; /* Запрещаем повторение фона */
+	background-size: cover; /* Фон растягивается на весь блок */
+	background-attachment: fixed; /* Фон фиксируется при прокрутке */
+	font-family: Arial, sans-serif; /* Задаем шрифт */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0; /* Убираем внешние отступы */
-    padding: 0; /* Убираем внутренние отступы */
-	 overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+	font-family: Arial, sans-serif; /* Устанавливаем шрифт для всего тела */
+	background-color: #f4f4f4; /* Светлый фон */
+	margin: 0; /* Убираем отступы по умолчанию */
+	padding: 0; /* Убираем отступы по умолчанию */
 }
 
 /* Навигация */
@@ -110,4 +109,240 @@ body {
 
 .slider-btn:hover {
 	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Стили для футера */
+.footer {
+	background-color: rgba(214, 225, 229, 0.8); /* Полупрозрачный фон */
+	color: #000000; /* Черный цвет текста */
+	padding: 20px 0; /* Отступы внутри футера */
+	text-align: center; /* Центрируем текст */
+}
+
+.footer__content {
+	display: flex; /* Используем flexbox для футера */
+	justify-content: space-between; /* Равномерное распределение элементов */
+	align-items: center; /* Вертикальное выравнивание */
+	max-width: 1200px; /* Ограничиваем максимальную ширину */
+	margin: 0 auto; /* Центрируем футер */
+}
+
+.footer__left {
+	display: flex; /* Используем flexbox для левой части футера */
+	justify-content: space-between; /* Равномерное распределение элементов */
+	gap: 15px; /* Отступы между элементами */
+}
+
+.footer__link {
+	display: inline-block; /* Отображение ссылок */
+	text-decoration: none; /* Убираем подчеркивание */
+}
+
+.footer__image {
+	width: 50px; /* Размер изображений */
+	height: 50px; /* Высота изображений */
+	object-fit: cover; /* Сохранение пропорций изображений */
+	border-radius: 5px; /* Скругляем углы изображений */
+	transition: transform 0.3s ease; /* Плавный переход при наведении */
+}
+
+.footer__image:hover {
+	transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+.footer__right {
+	font-size: 18px; /* Размер шрифта для правой части футера */
+	font-weight: bold; /* Жирный шрифт */
+}
+
+/*Кнопка переключения темы*/
+.theme-toggle-btn {
+	position: fixed; /* Закрепляем кнопку */
+	right: 10px; /* Отступ от правого края */
+	bottom: 20px; /* Отступ от нижнего края */
+	padding: 10px 15px; /* Внутренний отступ */
+	font-size: 16px; /* Размер текста */
+	color: #fff; /* Белый текст */
+	background-color: #f39c12; /* Оранжевый цвет */
+	border: none;
+	border-radius: 5px; /* Скругленные углы */
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+	z-index: 1000; /* Убедимся, что кнопка над другими элементами */
+	max-width: 200px; /* Максимальная ширина */
+	word-wrap: break-word; /* Разрешаем перенос текста */
+	text-align: center;
+}
+
+/* Ховер-эффекты */
+.theme-toggle-btn:hover {
+	background-color: #e67e22;
+	transform: scale(1.1);
+}
+
+/* Убираем фокусную рамку */
+.theme-toggle-btn:focus {
+	outline: none;
+}
+
+/* Тёмная тема: общий стиль */
+body.dark-theme {
+	background-color: #121212; /* Темный фон для всего тела */
+	color: #ffffff; /* Белый цвет текста */
+}
+
+body.dark-theme .navbar {
+	background-color: rgba(0, 0, 0, 0.8); /* Тёмный фон для навигационной панели */
+}
+
+body.dark-theme .news-container {
+	background-color: #333; /* Тёмный фон для контейнера новостей */
+}
+
+body.dark-theme .footer {
+	background-color: rgba(0, 0, 0, 0.8); /* Тёмный фон для футера */
+}
+
+/* Плавный переход для темной темы */
+body, .navbar, .news-container, .footer {
+	transition: all 0.3s ease; /* Плавный переход для всех элементов */
+}
+
+/* Тёмная тема */
+body.dark-theme {
+	background-color: #121212;
+	color: #ffffff;
+}
+
+body.dark-theme .navbar {
+	background-color: rgba(50, 50, 50, 0.8);
+}
+
+body.dark-theme .nav-list a {
+	color: #ffffff;
+}
+
+body.dark-theme .advertisement {
+	background-image: url(https://as1.ftcdn.net/v2/jpg/02/85/71/58/1000_F_285715893_wY7HxPCSzWPZUAy4HbYarowKUOZguFpg.jpg);
+	color: #f4f4f4;
+}
+
+body.dark-theme .advertisement::before {
+	background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .services {
+	background-color: #1a1a1a;
+}
+
+body.dark-theme .service__item {
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #ffffff;
+}
+
+body.dark-theme .service__item:hover {
+	transform: translateY(-10px);
+}
+
+body.dark-theme .service__price {
+	color: #ffd700;
+}
+
+body.dark-theme .service__item:hover .service__price {
+	color: #ff9900;
+}
+
+body.dark-theme .footer {
+	background-color: rgba(40, 40, 40, 0.8);
+	color: #ffffff;
+}
+
+body.dark-theme .footer__image {
+	filter: brightness(0.8);
+}
+
+body.dark-theme .footer__image:hover {
+	filter: brightness(1);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+	.navbar img {
+		 margin-right: 50px; /* Уменьшаем отступ справа */
+		 height: 80px; /* Уменьшаем высоту логотипа */
+	}
+	.nav-list {
+		 font-size: 16px; /* Уменьшаем размер шрифта */
+	}
+	.book-btn {
+		 font-size: 14px; /* Уменьшаем размер шрифта */
+		 padding: 10px 20px; /* Уменьшаем отступы */
+	}
+	.footer__image {
+		 width: 40px; /* Уменьшаем размер изображения */
+		 height: 40px; /* Уменьшаем размер изображения */
+	}
+	.theme-toggle-btn {
+		 top: 10px; /* Отступ сверху */
+		 right: 10px; /* Отступ справа */
+		 font-size: 14px; /* Уменьшаем размер шрифта */
+		 padding: 8px 16px; /* Уменьшаем отступы */
+	}
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		 flex-direction: column; /* Переводим навигацию в колонку */
+		 height: auto; /* Автоматическая высота */
+		 padding: 10px; /* Внутренние отступы */
+	}
+	.navbar img {
+		 margin-right: 0; /* Убираем отступ справа */
+		 margin-bottom: 10px; /* Добавляем отступ снизу */
+	}
+	.nav-list {
+		 flex-direction: column; /* Переводим список в колонку */
+		 align-items: center; /* Выравнивание по центру */
+	}
+	.nav-list li {
+		 margin: 10px 0; /* Добавляем отступы между элементами */
+	}
+	.footer__content {
+		 flex-direction: column; /* Располагаем элементы в колонку */
+		 align-items: center; /* Выравнивание по центру */
+	}
+	.footer__right {
+		 margin-top: 15px; /* Добавляем отступ сверху */
+	}
+	.theme-toggle-btn {
+		font-size: 12px;
+		padding: 8px 12px;
+		right: 15px;
+		bottom: 15px;
+		max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+	.team_title {
+		 font-size: 1.8em; /* Уменьшаем размер шрифта */
+	}
+	.team_descr {
+		 font-size: 1.2em; /* Уменьшаем размер шрифта */
+	}
+	.book-btn {
+		 padding: 8px 15px; /* Уменьшаем отступы */
+		 font-size: 12px; /* Уменьшаем размер шрифта */
+	}
+	.footer__image {
+		 width: 30px; /* Уменьшаем размер изображения */
+		 height: 30px; /* Уменьшаем размер изображения */
+	}
+	.theme-toggle-btn {
+		font-size: 10px;
+		padding: 6px 10px;
+		right: 10px; /* Меньший отступ справа */
+		bottom: 10px; /* Меньший отступ снизу */
+		max-width: 100px;
+  }
 }
