@@ -94,15 +94,7 @@ body {
 	background-color: #1e1e1e; /* Темный фон для контейнера */
 }
 
-.news-item {
-	background-color: #2a2a2a; /* Цвет фона для каждой карточки */
-	color: #fff; /* Цвет текста */
-	width: 300px; /* Фиксированная ширина карточки */
-	border-radius: 10px; /* Скругленные углы карточки */
-	overflow: hidden; /* Скрываем элементы, выходящие за пределы карточки */
-	text-align: center; /* Выравнивание текста по центру */
-	padding: 20px; /* Внутренние отступы */
-}
+
 
 .news-item img {
 	width: 100%; /* Ширина изображения 100% от ширины карточки */
@@ -207,56 +199,12 @@ body.dark-theme .footer {
 	background-color: rgba(0, 0, 0, 0.8); /* Тёмный фон для футера */
 }
 
-/* Плавный переход для темной темы */
-body, .navbar, .news-container, .footer {
-	transition: all 0.3s ease; /* Плавный переход для всех элементов */
-}
-/* Основные стили */
-header {
-	margin: 0; /* Убираем отступы по умолчанию у body */
-	background-repeat: no-repeat; /* Отключаем повтор фона */
-	background-size: cover; /* Устанавливаем фоновое изображение на весь размер блока */
-	background-attachment: fixed; /* Фон фиксирован относительно окна */
-	font-family: Arial, sans-serif; /* Задаем шрифт для заголовка */
+body.dark-theme  {
+	color: ffffff;
 }
 
-body {
-	font-family: Arial, sans-serif; /* Шрифт для всего тела */
-	background-color: #f4f4f4; /* Цвет фона для всего документа */
-	margin: 0; /* Убираем отступы у body */
-	padding: 0; /* Убираем паддинг у body */
-}
 
-/* Навигация */
-.navbar {
-	display: flex; /* Используем flexbox для навигации */
-	align-items: center; /* Выравниваем элементы по вертикали */
-	background-color: rgba(214, 225, 229, 0.8); /* Полупрозрачный фон */
-	height: 120px; /* Высота навигационной панели */
-	justify-content: center; /* Центрируем содержимое по горизонтали */
-}
 
-.navbar img {
-	max-width: 220px; /* Ограничиваем максимальную ширину изображения */
-	height: 100px; /* Устанавливаем фиксированную высоту для логотипа */
-	margin-right: 300px; /* Отступ справа, чтобы логотип сдвигался влево */
-}
-
-.nav-list {
-	list-style: none; /* Убираем маркеры у списка */
-	padding: 0; /* Убираем отступы у списка */
-	display: flex; /* Используем flexbox для горизонтального расположения */
-	font-size: 18px; /* Размер шрифта для ссылок */
-}
-
-.nav-list li {
-	margin-left: 20px; /* Отступы между пунктами меню */
-}
-
-.nav-list a {
-	color: rgb(0, 0, 0); /* Цвет текста ссылок */
-	text-decoration: none; /* Убираем подчеркивание у ссылок */
-}
 
 /* Блок "О нас" */
 .about-us {
@@ -281,9 +229,38 @@ body {
 	padding: 0 10px; /* Отступы слева и справа для текста абзацев */
 }
 /**/
-.theme-toggle-btn{
-	position:absolute;
+
+
+/*Кнопка переключения темы*/
+.theme-toggle-btn {
+	position: fixed; /* Закрепляем кнопку */
+	right: 10px; /* Отступ от правого края */
+	bottom: 20px; /* Отступ от нижнего края */
+	padding: 10px 15px; /* Внутренний отступ */
+	font-size: 16px; /* Размер текста */
+	color: #fff; /* Белый текст */
+	background-color: #f39c12; /* Оранжевый цвет */
+	border: none;
+	border-radius: 5px; /* Скругленные углы */
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+	z-index: 1000; /* Убедимся, что кнопка над другими элементами */
+	max-width: 200px; /* Максимальная ширина */
+	word-wrap: break-word; /* Разрешаем перенос текста */
+	text-align: center;
 }
+
+/* Ховер-эффекты */
+.theme-toggle-btn:hover {
+	background-color: #e67e22;
+	transform: scale(1.1);
+}
+
+/* Убираем фокусную рамку */
+.theme-toggle-btn:focus {
+	outline: none;
+}
+
 /* Новости и акции */
 .news-and-promotions h2 {
 	font-size: 2.5em; /* Размер шрифта заголовка для блока новостей */
@@ -305,13 +282,14 @@ body {
 	background-color: #2a2a2a; /* Цвет фона для каждой карточки */
 	color: #fff; /* Цвет текста */
 	width: 300px; /* Фиксированная ширина карточки */
-	border-radius: 10px; /* Скругленные углы карточки */
+	border-radius: 20px; /* Скругленные углы карточки */
 	overflow: hidden; /* Скрываем элементы, выходящие за пределы карточки */
 	text-align: center; /* Выравнивание текста по центру */
 	padding: 20px; /* Внутренние отступы */
 }
 
 .news-item img {
+	border-radius: 25px;
 	width: 100%; /* Ширина изображения 100% от ширины карточки */
 	height: 200px; /* Высота изображения */
 	object-fit: cover; /* Сохраняем пропорции изображения */
@@ -396,6 +374,10 @@ body {
 	font-weight: bold; /* Жирный шрифт */
 }
 
+body.dark-theme .centered {
+	color: white;
+}
+
 /* Тёмная тема: общий стиль */
 body.dark-theme {
 	background-color: #121212; /* Темный фон для всего тела */
@@ -417,4 +399,18 @@ body.dark-theme .footer {
 /* Плавный переход для темной темы */
 body, .navbar, .news-container, .footer {
 	transition: all 0.3s ease; /* Плавный переход для всех элементов */
+}
+
+/* Тёмная тема */
+body.dark-theme {
+	background-color: #121212;
+	color: #ffffff;
+}
+
+body.dark-theme .navbar {
+	background-color: rgba(50, 50, 50, 0.8);
+}
+
+body.dark-theme .nav-list a {
+	color: #ffffff;
 }
