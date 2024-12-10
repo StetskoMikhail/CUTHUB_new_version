@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Навигация */
 .navbar {
 	display: flex;
@@ -51,6 +52,10 @@ body {
 
 .nav-list a:hover {
 	color: #555;
+}
+
+.section_title {
+    padding-left: 100px;
 }
 
 /* Стили для первого блока О НАС */
@@ -131,6 +136,7 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    padding: 100px;
 }
  
 .services {
@@ -148,7 +154,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: calc(33.333% - 20px);
+    width: calc(100% - 20px);
     text-align: left;
     transition: transform 0.3s;
 }
