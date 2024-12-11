@@ -1,0 +1,244 @@
+ /* Основные стили */
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+/*Кнопка переключения темы*/
+.theme-toggle-btn {
+	position: fixed; /* Закрепляем кнопку */
+	right: 10px; /* Отступ от правого края */
+	bottom: 20px; /* Отступ от нижнего края */
+	padding: 10px 15px; /* Внутренний отступ */
+	font-size: 16px; /* Размер текста */
+	color: #fff; /* Белый текст */
+	background-color: #f39c12; /* Оранжевый цвет */
+	border: none;
+	border-radius: 5px; /* Скругленные углы */
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+	z-index: 1000; /* Убедимся, что кнопка над другими элементами */
+	max-width: 200px; /* Максимальная ширина */
+	word-wrap: break-word; /* Разрешаем перенос текста */
+	text-align: center;
+}
+/* Навигация */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(214, 225, 229, 0.8); /* Полупрозрачный фон */
+    height: 120px;
+    justify-content: space-between; /* Лого слева, навигация справа */
+    padding: 0 200px;
+    flex-wrap: nowrap; /* Предотвращаем оборачивание по умолчанию */
+}
+
+.navbar img {
+    max-width: 220px;
+    height: 120px; /* Автоматическая высота для сохранения пропорций */
+    margin-right: 20px; /* Отступ от меню */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+    margin: 0; /* Убираем дефолтные отступы */
+    padding: 0;
+    gap: 30px; /* Расстояние между элементами меню */
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #555;
+}
+
+/* Контакты */
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-info img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Карта */
+.map-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Тёмная тема */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme .navbar {
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+body.dark-theme .nav-list a {
+    color: #ffffff;
+}
+
+body.dark-theme .contact-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+body.dark-theme .map-container iframe {
+    border-radius: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .navbar img {
+        margin-right: 0;
+        max-width: 180px;
+        margin-bottom: 20px;
+    }
+    .nav-list {
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: center;
+    }
+    .nav-list li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    /* Контакты */
+    .contact-info {
+        padding: 20px;
+    }
+
+    /* Карта */
+    .map-container iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar img {
+        max-width: 150px;
+    }
+}
+
+/* Подвал */
+.footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Цвет фона */
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    color: #000;
+}
+
+/* Левая часть с изображениями */
+.footer__left {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__left a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.footer__left a:hover {
+    transform: scale(1.1);
+}
+
+.footer__left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Правая часть с годом */
+.footer__right {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__left {
+        margin-bottom: 20px;
+    }
+
+    .footer__right {
+        font-size: 1em;
+    }
+}
