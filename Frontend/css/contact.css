@@ -1,5 +1,5 @@
- /* Основные стили */
- body {
+/* Основные стили */
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -14,24 +14,25 @@ header {
     font-family: Arial, sans-serif;
 }
 
-/*Кнопка переключения темы*/
+/* Кнопка переключения темы */
 .theme-toggle-btn {
-	position: fixed; /* Закрепляем кнопку */
-	right: 10px; /* Отступ от правого края */
-	bottom: 20px; /* Отступ от нижнего края */
-	padding: 10px 15px; /* Внутренний отступ */
-	font-size: 16px; /* Размер текста */
-	color: #fff; /* Белый текст */
-	background-color: #f39c12; /* Оранжевый цвет */
-	border: none;
-	border-radius: 5px; /* Скругленные углы */
-	cursor: pointer;
-	transition: background-color 0.3s, transform 0.3s;
-	z-index: 1000; /* Убедимся, что кнопка над другими элементами */
-	max-width: 200px; /* Максимальная ширина */
-	word-wrap: break-word; /* Разрешаем перенос текста */
-	text-align: center;
+    position: fixed; /* Закрепляем кнопку */
+    right: 10px; /* Отступ от правого края */
+    bottom: 20px; /* Отступ от нижнего края */
+    padding: 10px 15px; /* Внутренний отступ */
+    font-size: 16px; /* Размер текста */
+    color: #fff; /* Белый текст */
+    background-color: #f39c12; /* Оранжевый цвет */
+    border: none;
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 2000; /* Обеспечиваем, что кнопка будет поверх всех других элементов, включая подвал */
+    max-width: 200px; /* Максимальная ширина */
+    word-wrap: break-word; /* Разрешаем перенос текста */
+    text-align: center;
 }
+
 /* Навигация */
 .navbar {
     display: flex;
@@ -81,7 +82,6 @@ header {
 .contact-section h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #333;
 }
 
 .contact-info {
@@ -131,6 +131,10 @@ body.dark-theme .navbar {
 
 body.dark-theme .nav-list a {
     color: #ffffff;
+}
+
+body.dart-theme .contact-section {
+    color: white;
 }
 
 body.dark-theme .contact-info {
@@ -184,27 +188,32 @@ body.dark-theme .map-container iframe {
 /* Подвал */
 .footer {
     background-color: rgba(0, 0, 0, 0.8); /* Цвет фона */
-    padding: 30px 20px;
+    padding: 20px 15px; /* Уменьшены паддинги подвала */
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
     color: #000;
+    position: fixed; /* Фиксируем подвал внизу экрана */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ширина 100%, чтобы подвал растягивался на всю ширину */
+    z-index: 1000; /* Чтобы подвал всегда был сверху, если есть другие элементы */
 }
 
 /* Левая часть с изображениями */
 .footer__left {
     display: flex;
-    gap: 20px;
+    gap: 12px; /* Уменьшен отступ между изображениями */
     justify-content: center;
     align-items: center;
 }
 
 .footer__left a {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 70px; /* Уменьшил размер изображений */
+    height: 70px;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s;
@@ -222,8 +231,9 @@ body.dark-theme .map-container iframe {
 
 /* Правая часть с годом */
 .footer__right {
-    font-size: 1.2em;
+    font-size: 1.1em; /* Уменьшен размер шрифта */
     font-weight: bold;
+    margin-left: 40px; /* Смещаем блок с годом немного влево */
 }
 
 /* Мобильная адаптивность */
@@ -240,5 +250,6 @@ body.dark-theme .map-container iframe {
 
     .footer__right {
         font-size: 1em;
+        margin-left: 0; /* Убираем отступ на мобильных */
     }
 }
